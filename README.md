@@ -21,11 +21,11 @@ This repository contains solutions for puzzle quests from 2024 and 2025. Each qu
 |-------|--------|-------|--------|-------|--------|-------|--------|
 | 01 | ✅✅✅ | 02 | ✅✅✅ | 03 | ✅✅✅ | 04 | ✅✅✅ |
 | 05 | ✅✅✅ | 06 | ✅✅✅ | 07 | ✅✅✅ | 08 | ✅✅✅ |
-| 09 | ✅✅✅ | 10 | ✅✅❌ | 11 | ✅✅✅ | 12 | ❌❌❌ |
+| 09 | ✅✅✅ | 10 | ✅✅❌ | 11 | ✅✅✅ | 12 | ✅✅❌ |
 | 13 | ❌❌❌ | 14 | ❌❌❌ | 15 | ❌❌❌ | 16 | ❌❌❌ |
 | 17 | ❌❌❌ | 18 | ❌❌❌ | 19 | ❌❌❌ | 20 | ❌❌❌ |
 
-**Completion: 32/60 parts**
+**Completion: 34/60 parts**
 
 ### Year 2025 🐲
 
@@ -44,16 +44,9 @@ This repository contains solutions for puzzle quests from 2024 and 2025. Each qu
 
 ## 🚀 Running Solutions
 
-Each solution can be executed independently:
+Each solution can be executed by running:
 
 ```bash
-cd year_2024/quest_01
-python quest_01.py
-```
-
-Or use the main runner if available:
-
-```bash
-python ec.py
+python ec.py 2024 01
 ```
 
