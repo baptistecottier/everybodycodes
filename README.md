@@ -2,51 +2,28 @@
 
 My solutions for the **Everybody Codes** programming puzzles across multiple years.
 
-> Everybody Codes is an annual programming challenge featuring puzzles of increasing difficulty throughout the year.
 
-## 📋 Overview
+### The Kingdom of Algorithmia (2024) 🏰
 
-This repository contains solutions for puzzle quests from 2024 and 2025. Each quest folder contains:
-- `quest_XX.py` - The solution implementation
-- `quest_XX.input` - The puzzle input
-- `quest_XX.test` - The test cases
-
-## 📊 Progress
-
-> Each quest consists of **3 parts**. Progress shows parts completed per quest.
-
-### Year 2024 🐥
-
-| Quest | Status | Quest | Status | Quest | Status | Quest | Status |
-|-------|--------|-------|--------|-------|--------|-------|--------|
-| 01 | ✅✅✅ | 02 | ✅✅✅ | 03 | ✅✅✅ | 04 | ✅✅✅ |
-| 05 | ✅✅✅ | 06 | ✅✅✅ | 07 | ✅✅✅ | 08 | ✅✅✅ |
-| 09 | ✅✅✅ | 10 | ✅✅❌ | 11 | ✅✅✅ | 12 | ✅✅❌ |
-| 13 | ❌❌❌ | 14 | ❌❌❌ | 15 | ❌❌❌ | 16 | ❌❌❌ |
-| 17 | ❌❌❌ | 18 | ❌❌❌ | 19 | ❌❌❌ | 20 | ❌❌❌ |
-
-**Completion: 34/60 parts**
-
-### Year 2025 🐲
-
-| Quest | Status | Quest | Status | Quest | Status | Quest | Status |
-|-------|--------|-------|--------|-------|--------|-------|--------|
-| 01 | ❌❌❌ | 02 | ❌❌❌ | 03 | ❌❌❌ | 04 | ❌❌❌ |
-| 05 | ❌❌❌ | 06 | ❌❌❌ | 07 | ❌❌❌ | 08 | ❌❌❌ |
-| 09 | ❌❌❌ | 10 | ❌❌❌ | 11 | ❌❌❌ | 12 | ❌❌❌ |
-| 13 | ❌❌❌ | 14 | ❌❌❌ | 15 | ❌❌❌ | 16 | ❌❌❌ |
-| 17 | ❌❌❌ | 18 | ❌❌❌ | 19 | ❌❌❌ | 20 | ❌❌❌ |
-
-**Completion: 0/60 parts**
-
----
-
-
-## 🚀 Running Solutions
-
-Each solution can be executed by running:
-
-```bash
-python ec.py 2024 01
-```
-
+| Quest | Personal input | All inputs       | Average Time |
+|-------|----------------|:----------------:|--------------:|
+| 01    | ✅✅✅          | ✅✅✅            | 2.39 ms
+| 02    | ✅✅✅          | ✅✅✅            | 254.32 ms
+| 03    | ✅✅✅          | ✅✅✅            | 10.56 ms
+| 04    | ✅✅✅          | ✅✅✅            | 0.24 ms
+| 05    | ✅✅✅          | ✅✅✅            | 1675.75 ms
+| 06    | ✅✅✅          | ✅✅✅            | 6.38 ms
+| 07    | ✅✅✅          | ✅✅✅            | 4406.69 ms
+| 08    | ✅✅✅          | ✅✅❌            |
+| 09    | ✅✅✅          | ✅✅✅            | 210.22 ms
+| 10    | ✅✅❌          |                   |
+| 11    | ✅✅✅          | ✅✅✅            | 48.28 ms
+| 12    | ✅✅❌          |
+| 13    | ✅✅✅          | ✅✅✅            | 45.26 ms
+| 14    | ✅✅✅          | ✅✅✅              | 3573.99 ms
+| 15    | ✅✅❌          | 
+| 16    | ✅✅❌          |
+| 17    | ✅✅✅          | ✅✅✅          | 162.77 ms
+| 18    | ✅✅❌          | 
+| 19    | ✅✅❌          | 
+| 20    | ✅❌❌          |

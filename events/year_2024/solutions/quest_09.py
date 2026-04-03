@@ -1,31 +1,38 @@
 """
-Docstring for year_2024.quest_09.quest_09
+Event: The Kingdom of Algorithmia
+Quest 9: Sparkling Bugs
 """
 
-
-def get_part_input(test_mode: bool):
-    """
-    Returns puzzle input parts separated by double newlines from quest_09.input
-    file.
-    """
-    filename = "quest_09.test" if test_mode else "quest_09.input"
-    with open(filename, encoding="utf-8") as f:
-        puzzle_inputs = f.read().split("\n\n---\n\n")
-    return [list(map(int, part.splitlines())) for part in puzzle_inputs]
+from typing import Iterator
 
 
-def solver(test_mode):
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[list[int]]:
     """
-    Solver
+    Parse the raw input content into per-part structures.
     """
-    dots = [1, 3, 5, 10, 15, 16, 20, 24, 25, 30,
-            37, 38, 49, 50, 74, 75, 100, 101]
-    parts_input = get_part_input(test_mode)
-    for part, sbs in enumerate(parts_input):
+    return [list(map(int, pi.splitlines())) for pi in puzzle_input.values()]
+
+
+def solver(
+    sparkballs: list[list[int]]
+) -> Iterator[int]:
+    """
+    Solve all puzzle parts for this quest.
+    """
+    dots: list[int] = [
+        1,   3,  5, 10, 15, 16, 20,  24,   25,
+        30, 37, 38, 49, 50, 74, 75, 100, 101
+        ]
+    for part, sbs in enumerate(sparkballs):
         yield get_min_beetles(sbs, dots[:[4, 10, 18][part]])
 
 
-def get_min_beetles(sparkballs, dots):
+def get_min_beetles(
+    sparkballs: list[int],
+    dots: list[int]
+) -> int:
     """
     Calculate the minimum number of beetles needed to collect exactly
     sparkballs using dynamic programming.
@@ -53,4 +60,4 @@ def get_min_beetles(sparkballs, dots):
         else:
             total_beetles += beetles[sb]
 
-    return total_beetles
+    return int(total_beetles)
