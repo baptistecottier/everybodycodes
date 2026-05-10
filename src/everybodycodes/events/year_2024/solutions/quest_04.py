@@ -30,19 +30,17 @@ def median_level(nails: NailLengths) -> int:
     return int(median(nails))
 
 
-def preprocessing(
-    puzzle_input: str
-) -> list[NailLengths]:
+def preprocessing(puzzle_input: str) -> list[NailLengths]:
     """
     Parse the raw input content into per-part structures.
     """
-    return [list(map(int, _nails.strip().splitlines()))
-            for _nails in puzzle_input.split("---")]
+    return [
+        list(map(int, _nails.strip().splitlines()))
+        for _nails in puzzle_input.split("---")
+    ]
 
 
-def solver(
-    lengths: list[NailLengths]
-) -> Iterator[int]:
+def solver(lengths: list[NailLengths]) -> Iterator[int]:
     """
     Yield three aggregated hammer_strikes results for the input parts,
     using min for the first two parts and median for the third.
@@ -56,10 +54,7 @@ def solver(
         yield hammer_strikes(*to_level)
 
 
-def hammer_strikes(
-    nails: NailLengths,
-    f: Callable[[NailLengths], int]
-) -> int:
+def hammer_strikes(nails: NailLengths, f: Callable[[NailLengths], int]) -> int:
     """
     Return the total number of strikes required to move each nail to the
     integer target produced by applying f to the nails.

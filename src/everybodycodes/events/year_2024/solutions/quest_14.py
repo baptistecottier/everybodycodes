@@ -1,6 +1,6 @@
 """
 Event: The Kingdom of Algorithmia
-Quest 14: The House of Palms
+Quest: The House of Palms
 """
 
 from typing import Iterator, TypeAlias
@@ -10,9 +10,7 @@ Moves: TypeAlias = list[tuple[int, Coordinates]]
 GrowthPlan: TypeAlias = list[Moves]
 
 
-def preprocessing(
-    puzzle_input: dict[int, str]
-) -> list[GrowthPlan]:
+def preprocessing(puzzle_input: dict[int, str]) -> list[GrowthPlan]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -21,24 +19,29 @@ def preprocessing(
         part_input: list[Moves] = []
         for line in part_note.splitlines():
             steps: Moves = []
-            for step in line.split(','):
+            for step in line.split(","):
                 n = int(step[1:])
                 match step[0]:
-                    case 'R': steps.append((n, (1, 0, 0)))
-                    case 'L': steps.append((n, (-1, 0, 0)))
-                    case 'F': steps.append((n, (0, 0, 1)))
-                    case 'B': steps.append((n, (0, 0, -1)))
-                    case 'U': steps.append((n, (0, 1, 0)))
-                    case 'D': steps.append((n, (0, -1, 0)))
-                    case _: raise ValueError("Invalid input")
+                    case "R":
+                        steps.append((n, (1, 0, 0)))
+                    case "L":
+                        steps.append((n, (-1, 0, 0)))
+                    case "F":
+                        steps.append((n, (0, 0, 1)))
+                    case "B":
+                        steps.append((n, (0, 0, -1)))
+                    case "U":
+                        steps.append((n, (0, 1, 0)))
+                    case "D":
+                        steps.append((n, (0, -1, 0)))
+                    case _:
+                        raise ValueError("Invalid input")
             part_input.append(steps)
         parts_input.append(part_input)
     return parts_input
 
 
-def solver(
-    growth_plans: list[GrowthPlan]
-) -> Iterator[int]:
+def solver(growth_plans: list[GrowthPlan]) -> Iterator[int]:
     """
     Solves a 3D path-tracing puzzle by tracking visited coordinates and leaf
     positions across multiple input parts.
@@ -57,16 +60,16 @@ def solver(
         segments.append([visited, leaves])
     yield max(y for _, y, _ in segments[0][0])
     yield len(segments[1][0])
-    yield min(sum(distance(leaf, (x, y, z), segments[2][0])
-                  for leaf in segments[2][1])                        # leaves
-              for (x, y, z) in segments[2][0] if x == 0 and z == 0)  # trunk
+    yield min(
+        sum(
+            distance(leaf, (x, y, z), segments[2][0]) for leaf in segments[2][1]
+        )  # leaves
+        for (x, y, z) in segments[2][0]
+        if x == 0 and z == 0
+    )  # trunk
 
 
-def distance(
-    start: Coordinates,
-    end: Coordinates,
-    segments: set[Coordinates]
-) -> int:
+def distance(start: Coordinates, end: Coordinates, segments: set[Coordinates]) -> int:
     """
     Calculate the shortest path distance between two points in a 3D grid using
     BFS.
@@ -78,8 +81,14 @@ def distance(
         d, (x, y, z) = queue.pop(0)
         if (x, y, z) == end:
             return d
-        for tx, ty, tz in ((0, 0, 1), (0, 0, -1), (1, 0, 0),
-                           (-1, 0, 0), (0, 1, 0), (0, -1, 0)):
+        for tx, ty, tz in (
+            (0, 0, 1),
+            (0, 0, -1),
+            (1, 0, 0),
+            (-1, 0, 0),
+            (0, 1, 0),
+            (0, -1, 0),
+        ):
             nx, ny, nz = x + tx, y + ty, z + tz
             if (nx, ny, nz) in visited or (nx, ny, nz) not in segments:
                 continue

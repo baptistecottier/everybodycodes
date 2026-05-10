@@ -3,16 +3,13 @@ Event: The Kingdom of Algorithmia
 Quest: Pseudo-Random Clap Dance
 """
 
-
 from collections import defaultdict
 from typing import Iterator, TypeAlias
 
 Dancers: TypeAlias = list[list[int]]
 
 
-def preprocessing(
-    puzzle_input: dict[int, str]
-) -> list[Dancers]:
+def preprocessing(puzzle_input: dict[int, str]) -> list[Dancers]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -23,24 +20,18 @@ def preprocessing(
     return lines
 
 
-def solver(
-    rounds_dancers: list[Dancers]
-) -> Iterator[int]:
+def solver(rounds_dancers: list[Dancers]) -> Iterator[int]:
     """
     Yield solutions for each puzzle part by parsing the provided input
     content and invoking play with the corresponding parameters.
     """
     for dancers, kwargs in zip(
-            rounds_dancers,
-            ({"max_rounds": 10}, {"n_shouts": 2024}, {})):
+        rounds_dancers, ({"max_rounds": 10}, {"n_shouts": 2024}, {})
+    ):
         yield play(dancers, **kwargs)
 
 
-def play(
-    dancers: Dancers,
-    max_rounds: int = 0,
-    n_shouts: int = 0
-) -> int:
+def play(dancers: Dancers, max_rounds: int = 0, n_shouts: int = 0) -> int:
     """
     Simulate a four-column dancer rotation, tracking seen states and shout
     frequencies, and return either the most frequent shout upon cycle
@@ -64,7 +55,7 @@ def play(
         shout = int("".join(str(dancers[i][0]) for i in range(4)))
 
         if max_rounds == n_shouts == 0:
-            state: str = f"{"".join(str(c) for clmn in dancers for c in clmn)}"
+            state: str = f"{''.join(str(c) for clmn in dancers for c in clmn)}"
             if state in positions:
                 return max(shouts.keys())
             positions.add(state)

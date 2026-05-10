@@ -1,5 +1,16 @@
-pyrightconfig.json
-.vscode/settings.json
-**/.DS_Store
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Project related files
+**/inputs/**
+
+# MacOS generated files
 .DS_Store
-**/*.pyc

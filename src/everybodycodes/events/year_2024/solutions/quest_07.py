@@ -10,18 +10,18 @@ Plans: TypeAlias = dict[str, tuple[int, ...]]
 Track: TypeAlias = tuple[int, ...]
 
 
-def preprocessing(
-    puzzle_input: dict[int, str]
-) -> list[tuple[Plans, Track]]:
+def preprocessing(puzzle_input: dict[int, str]) -> list[tuple[Plans, Track]]:
     """
     Parse the provided input content and return a list of (plans, track)
     tuples where plans map names to tuples of action integers and tracks are
     parsed via get_track.
     """
-    raw_tracks = ["""
+    raw_tracks = [
+        """
 S====
 =====
-""", """
+""",
+        """
 S-=++=-==++=++=-=+=-=+=+=--=-=++=-==++=-+=-=+=-=+=+=++=-+==++=++=-=-=--
 -                                                                     -
 =                                                                     =
@@ -31,7 +31,8 @@ S-=++=-==++=++=-=+=-=+=+=--=-=++=-==++=-+=-=+=-=+=+=++=-+==++=++=-=-=--
 =                                                                     =
 -                                                                     -
 --==++++==+=+++-=+=-=+=-+-=+-=+-=+=-=+=--=+++=++=+++==++==--=+=++==+++-
-""", """
+""",
+        """
 S+= +=-== +=++=     =+=+=--=    =-= ++=     +=-  =+=++=-+==+ =++=-=-=--
 - + +   + =   =     =      =   == = - -     - =  =         =-=        -
 = + + +-- =-= ==-==-= --++ +  == == = +     - =  =    ==++=    =++=-=++
@@ -41,7 +42,8 @@ S+= +=-== +=++=     =+=+=--=    =-= ++=     +=-  =+=++=-+==+ =++=-=-=--
 =     ==- ==+-- = = = ++= +=--      ==+ ==--= +--+=-= ==- ==   =+=    =
 -               = = = =   +  +  ==+ = = +   =        ++    =          -
 -               = + + =   +  -  = + = = +   =        +     =          -
---==++++==+=+++-= =-= =-+-=  =+-= =-= =--   +=++=+++==     -=+=++==+++-"""]
+--==++++==+=+++-= =-= =-+-=  =+-= =-= =--   +=++=+++==     -=+=++==+++-""",
+    ]
 
     act_map: dict[str, int] = {"+": 1, "-": -1, "=": 0, "S": 0}
     part_inputs: list[tuple[Plans, Track]] = []
@@ -59,9 +61,7 @@ S+= +=-== +=++=     =+=+=--=    =-= ++=     +=-  =+=++=-+==+ =++=-=-=--
     return part_inputs
 
 
-def solver(
-    race_infos: list[tuple[Plans, Track]]
-) -> Iterator[str]:
+def solver(race_infos: list[tuple[Plans, Track]]) -> Iterator[str]:
     """
     Run race simulations from inputs and yield two sorted ranking strings
     followed by the count of winning permutations for the final scenario.
@@ -82,10 +82,7 @@ def solver(
 
 
 def race(
-    plans: Plans,
-    track: Track,
-    max_segment: int = 1_000_000,
-    n_laps: int = 1_000_000
+    plans: Plans, track: Track, max_segment: int = 1_000_000, n_laps: int = 1_000_000
 ) -> dict[str, int]:
     """
     Simulate each participant's progression across a circular track by
@@ -110,9 +107,7 @@ def race(
     return ranks
 
 
-def get_track(
-    raw_track: str
-) -> Track:
+def get_track(raw_track: str) -> Track:
     """
     Return a tuple of integers representing the sequence of actions
     obtained by traversing the ASCII grid in data from the initial position to

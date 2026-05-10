@@ -1,6 +1,6 @@
 """
 Event: The Kingdom of Algorithmia
-Quest 13: Never Gonna Let You Down
+Quest: Never Gonna Let You Down
 """
 
 import heapq
@@ -23,14 +23,13 @@ class Chamber:
         exit (Coord): The coordinate representing the exit point from the
         chamber.
     """
+
     maze: dict[Coord, int]
     exits: set[Coord]
     start: Coord
 
 
-def preprocessing(
-    puzzle_input: dict[int, str]
-) -> list[Chamber]:
+def preprocessing(puzzle_input: dict[int, str]) -> list[Chamber]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -44,19 +43,17 @@ def preprocessing(
             for x, c in enumerate(line):
                 if c.isdigit():
                     doors[(x, y)] = int(c)
-                elif c == 'S':
+                elif c == "S":
                     starts.add((x, y))
                     doors[(x, y)] = 0
-                elif c == 'E':
-                    end: tuple[int, int] = (x, y)
+                elif c == "E":
+                    end = (x, y)
                     doors[(x, y)] = 0
         maps.append(Chamber(doors, starts, end))
     return maps
 
 
-def solver(
-    chambers: list[Chamber]
-) -> Iterator[int]:
+def solver(chambers: list[Chamber]) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """
@@ -67,7 +64,7 @@ def solver(
 
         queue: list[tuple[int, Coord]] = []
         heapq.heappush(queue, (0, start))
-        visited: defaultdict[Coord, float] = defaultdict(lambda: float('inf'))
+        visited: defaultdict[Coord, float] = defaultdict(lambda: float("inf"))
         visited[start] = 0
         while queue:
             t, (x, y) = heapq.heappop(queue)
@@ -81,9 +78,13 @@ def solver(
 
                 if npos not in maze:
                     continue
-                nt: int = t + 1 + min(
-                    (maze[npos] - maze[(x, y)]) % 10,
-                    (maze[(x, y)] - maze[npos]) % 10
+                nt: int = (
+                    t
+                    + 1
+                    + min(
+                        (maze[npos] - maze[(x, y)]) % 10,
+                        (maze[(x, y)] - maze[npos]) % 10,
+                    )
                 )
 
                 if npos in visited:

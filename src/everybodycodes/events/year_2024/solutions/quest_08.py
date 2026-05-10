@@ -1,6 +1,6 @@
 """
 Event: The Kingdom of Algorithmia
-Quest 8: A Shrine for Nullpointer
+Quest: A Shrine for Nullpointer
 """
 
 from collections import defaultdict
@@ -9,9 +9,7 @@ from typing import Iterator, TypeAlias
 Config: TypeAlias = tuple[int, int, int, bool, bool]
 
 
-def preprocessing(
-    puzzle_input: dict[int, str]
-) -> list[Config]:
+def preprocessing(puzzle_input: dict[int, str]) -> list[Config]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -20,15 +18,11 @@ def preprocessing(
     acol = [1, 1111, 10]
     dyn_thick = [False, True, True]
     empty_spaces = [False, False, True]
-    configs: list[Config] = list(
-        zip(avail, nullptr, acol, dyn_thick, empty_spaces)
-        )
+    configs: list[Config] = list(zip(avail, nullptr, acol, dyn_thick, empty_spaces))
     return configs
 
 
-def solver(
-    n_blocks: list[list[int]]
-) -> Iterator[int]:
+def solver(n_blocks: list[list[int]]) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """
@@ -42,7 +36,7 @@ def build_tower(
     nullptr: int,
     acol: int,
     dyn_thick: int = False,
-    empty_spaces: int = False
+    empty_spaces: int = False,
 ) -> int:
     """
     Return the computed surplus (or deficit) of blocks after constructing a
@@ -57,14 +51,14 @@ def build_tower(
 
     while blocks < avail:
         half_width += 1
-        width: int = 2 * half_width + 1
+        width = 2 * half_width + 1
         blocks += width * thickness
 
         if empty_spaces:
             for x in range(-half_width, half_width + 1):
                 columns_size[x] += thickness
         if dyn_thick:
-            thickness: int = (thickness * nullptr) % acol + margin
+            thickness = (thickness * nullptr) % acol + margin
 
     empty: int = (nullptr * width) * columns_size[0] % acol
     for x in range(1, half_width):
