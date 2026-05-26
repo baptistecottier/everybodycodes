@@ -1,0 +1,1106 @@
+[
+    {
+        "case": 1,
+        "input": [
+            "ABBAABAAB",
+            "AAABBBAAA"
+        ],
+        "expected": [
+            "@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 2,
+        "input": [
+            "ABABAB",
+            "ABABAB"
+        ],
+        "expected": [
+            ""
+        ]
+    },
+    {
+        "case": 3,
+        "input": [
+            "A"
+        ],
+        "expected": [
+            ""
+        ]
+    },
+    {
+        "case": 4,
+        "input": [
+            "B"
+        ],
+        "expected": [
+            ""
+        ]
+    },
+    {
+        "case": 5,
+        "input": [
+            "A",
+            "A"
+        ],
+        "expected": [
+            ""
+        ]
+    },
+    {
+        "case": 6,
+        "input": [
+            "B",
+            "B"
+        ],
+        "expected": [
+            ""
+        ]
+    },
+    {
+        "case": 7,
+        "input": [
+            "ABBBABBB"
+        ],
+        "expected": [
+            "@@@@"
+        ]
+    },
+    {
+        "case": 8,
+        "input": [
+            "ABBBABAB"
+        ],
+        "expected": [
+            "@@"
+        ]
+    },
+    {
+        "case": 9,
+        "input": [
+            "ABAABBBB"
+        ],
+        "expected": [
+            "@@@@"
+        ]
+    },
+    {
+        "case": 10,
+        "input": [
+            "ABBAAABB"
+        ],
+        "expected": [
+            "@@@@"
+        ]
+    },
+    {
+        "case": 11,
+        "input": [
+            "BBABBBBB"
+        ],
+        "expected": [
+            "@@@@@"
+        ]
+    },
+    {
+        "case": 12,
+        "input": [
+            "BBABBBBB"
+        ],
+        "expected": [
+            "@@@@@"
+        ]
+    },
+    {
+        "case": 13,
+        "input": [
+            "BABBBBBB"
+        ],
+        "expected": [
+            "@@@@@"
+        ]
+    },
+    {
+        "case": 14,
+        "input": [
+            "BBAABBAB"
+        ],
+        "expected": [
+            "@@@"
+        ]
+    },
+    {
+        "case": 15,
+        "input": [
+            "AABBABBA"
+        ],
+        "expected": [
+            "@@@"
+        ]
+    },
+    {
+        "case": 16,
+        "input": [
+            "ABBAAABB"
+        ],
+        "expected": [
+            "@@@@"
+        ]
+    },
+    {
+        "case": 17,
+        "input": [
+            "BBBAAAAB"
+        ],
+        "expected": [
+            "@@@@@"
+        ]
+    },
+    {
+        "case": 18,
+        "input": [
+            "AAAAAAAA"
+        ],
+        "expected": [
+            "@@@@@@@"
+        ]
+    },
+    {
+        "case": 19,
+        "input": [
+            "AABBBBBB"
+        ],
+        "expected": [
+            "@@@@@@"
+        ]
+    },
+    {
+        "case": 20,
+        "input": [
+            "AAAAABAB"
+        ],
+        "expected": [
+            "@@@@"
+        ]
+    },
+    {
+        "case": 21,
+        "input": [
+            "AAAAABBBBABBA",
+            "BBABABAAABAAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 22,
+        "input": [
+            "BABBAAAAAAAAA",
+            "ABBBBBAABBABA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 23,
+        "input": [
+            "BABABBBBBABAA",
+            "BAAAABBABBBBA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 24,
+        "input": [
+            "AAABBBAABAABA",
+            "BAAAAAABAAAAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 25,
+        "input": [
+            "AABBBAABBABAB",
+            "AAABBBAAAAAAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 26,
+        "input": [
+            "BBABBBABAAABA",
+            "BBBBBBAABBBBA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 27,
+        "input": [
+            "BBBABAABAABBB",
+            "ABBBBABABBABB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 28,
+        "input": [
+            "AABABBABABAAB",
+            "BAABBBABBAABB"
+        ],
+        "expected": [
+            "@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 29,
+        "input": [
+            "ABBABBAABBAAB",
+            "BABAABBAAAABA"
+        ],
+        "expected": [
+            "@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 30,
+        "input": [
+            "ABABBABBBBABA",
+            "BBBBBAABBABAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 31,
+        "input": [
+            "BBBAABABAAAAA",
+            "AABBAABAABAAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 32,
+        "input": [
+            "AAAAABBBBAABA",
+            "BAAAABBBAAAAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 33,
+        "input": [
+            "BBBAAABBBAAAA",
+            "BBABBAAAAAABB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 34,
+        "input": [
+            "BAABBABAABAAA",
+            "BAABAAABABBBB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 35,
+        "input": [
+            "AAAAABBAABAAA",
+            "BBBBABBBBAABB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 36,
+        "input": [
+            "BBBBABBAABAAA",
+            "AAABBABBBABBA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 37,
+        "input": [
+            "ABABBABBBBAAA",
+            "ABBAABABAAAAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 38,
+        "input": [
+            "ABABAAAABAAAA",
+            "BBBBABBBBBBBB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 39,
+        "input": [
+            "BAAABAAABAAAB",
+            "BAAABBBAAAABA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 40,
+        "input": [
+            "BBABAABABBBAB",
+            "BBBBBBBBBBBBB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 41,
+        "input": [
+            "ABBBBABAABBBBBBAAA",
+            "ABBABABABBBBBBAABA",
+            "ABAABABBBBBABAAABB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 42,
+        "input": [
+            "ABBAAAABAABABBBBBB",
+            "BBABAAAAAABAABABAB",
+            "BAABAAABBABAABBBBB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 43,
+        "input": [
+            "AAABBBABBABABBBBAA",
+            "BAABBABABBBBBAABBA",
+            "BBABBBBBBBABAABAAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 44,
+        "input": [
+            "ABBABABAABAAABBAAB",
+            "AAABBABABAAAABBABA",
+            "BBBBAABBBBBBAABABB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 45,
+        "input": [
+            "ABBAABAABABABBBBAB",
+            "AAABBBAAABBBBAABAA",
+            "ABBABABAAAAAABABAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 46,
+        "input": [
+            "BAAAABBAABBAAAAAAA",
+            "BABBAABBBBBAAABAAB",
+            "AABABAAAABBABBBABA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 47,
+        "input": [
+            "AAAABBAAAAAABBABBA",
+            "BAAABBABBBABAAAAAB",
+            "BAABBBAAAABAABABBA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 48,
+        "input": [
+            "BABABBAABABBBBAABA",
+            "BBBBBAAABAAAAABBAB",
+            "AAABBAABBBAAABBABA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 49,
+        "input": [
+            "ABAAAABABABAABBBBB",
+            "ABABBBABABABBAAAAA",
+            "ABAABABABBBBBBAABB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 50,
+        "input": [
+            "AAABABBBBABAAABABB",
+            "ABBBBABBABBBABBBBA",
+            "BBBBBAAABBABABABAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 51,
+        "input": [
+            "BBBABBAABBBBBBAABA",
+            "ABBBBBBABBBABBAAAB",
+            "BBABBAABBBBABBBBBA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 52,
+        "input": [
+            "BBBAABABABBAABABAA",
+            "BBBABABBAAAAABBABB",
+            "AABBAABAABBBABBBAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 53,
+        "input": [
+            "BAABAAABAAAABAAABA",
+            "AABBAAAABAAABAABAA",
+            "ABABAAABBAABABBBBA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 54,
+        "input": [
+            "AAAAABAAABBBBAAABB",
+            "AAAABABBBABBBAAAAB",
+            "AABABBBBAABAABBABB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 55,
+        "input": [
+            "AAABBAAAABAABABABA",
+            "ABAAAAABBABAABBBBB",
+            "BAABBABBABABABABAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 56,
+        "input": [
+            "BBBBBBAABBABABAABB",
+            "AABBBBAAABBBABABBB",
+            "BBBABABBAABABBBBAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 57,
+        "input": [
+            "BBABAAAAAAAABAABBB",
+            "BBABABBBABBABAABBB",
+            "BABABAABBBBBABAAAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 58,
+        "input": [
+            "AAAAABABBAABABBABA",
+            "BBAAAAAABABAABBABA",
+            "AABBAAAAAABAAABAAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 59,
+        "input": [
+            "BBBABAAABBBBAAABAB",
+            "BABBAABBBAABABABBB",
+            "BABABBABAAAABAABBB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 60,
+        "input": [
+            "ABBABBBABABBAABABA",
+            "BABBABBBABAABAABAA",
+            "ABABBAAABAABABABBA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 61,
+        "input": [
+            "BBBAABBABAAAAABABABBBBB",
+            "BABBBAAAAAABBAABBAABABB",
+            "BBBAAABABBAABBAABBABBAA",
+            "ABABAABBBBAABABBBBBBBAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 62,
+        "input": [
+            "BBAAABBABBBAAAAABAABABA",
+            "AAABBABBBABABABABBAAABA",
+            "ABAAAAAAABABAABBBBBBBAB",
+            "BBAABAAAAABAAAABBAABABB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 63,
+        "input": [
+            "AABABBAABAABABBAABABBAA",
+            "ABBABAABAABAAABBBABBAAA",
+            "BAABABAABBAAABBAAABABBB",
+            "BABAAABBAABBAABBBBBBBAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 64,
+        "input": [
+            "AAAAAABABBBBBAABAAAAAAB",
+            "BAABABBBBBBBBBBBBBAABAB",
+            "AABAABAABAABAAABBBAAAAB",
+            "ABAABBABBBABABABABABBAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 65,
+        "input": [
+            "AAABBABBAAAABAABBAAAABA",
+            "ABBBABBBAABBAABABBBAAAA",
+            "BBBAAAABBAABAABBAABBABB",
+            "AAABAAABAAAAABAABBAAABB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 66,
+        "input": [
+            "BABBAABAABBBABBABABAABB",
+            "ABABBAAAABBABBBABBAABBA",
+            "AABABABABAAABBABBBABBBA",
+            "ABBABABBBBBBBBBBBABBAAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 67,
+        "input": [
+            "BAABABABBAAABBABBBABBAA",
+            "BAAAABBABABAABABAAABBAA",
+            "BBBBBBBAABBBABBBBBAAABB",
+            "BABBAAAAAABABAAAABABBAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 68,
+        "input": [
+            "ABBABBBAAABABBAABBAABAB",
+            "ABAAAABBBBAAAABABAABABB",
+            "BBAAAABBBBBBBAAABBABBAA",
+            "ABBBABAABBBABBABBBABABB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 69,
+        "input": [
+            "ABBABABBBABBBABAABBBBAA",
+            "BBBABAABBBAABBBBBBBAABB",
+            "ABAABABABAAAAAABBBBBAAA",
+            "ABBABBBBABAAABBBBBBAABB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 70,
+        "input": [
+            "ABABBAAAABABBABBAABABAA",
+            "ABAAAABBAAAABAABBABBBBB",
+            "AAAAABAAABAABABAABABBBA",
+            "BABBBBABAABBABBABABBABA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 71,
+        "input": [
+            "AAABABBABBBBBABBABABAAA",
+            "ABBABBBAAAABBABABBAAAAB",
+            "BAAAAAABABBAAABABBBBBAA",
+            "ABABBAABABBBABABABAABAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 72,
+        "input": [
+            "BBAABBBABBBAABBBBABAAAB",
+            "ABBABBABBBBABBBABAABBAB",
+            "BBAABAABABAAAAAAAABBBBB",
+            "AAABBABBAABBABBABBBBABA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 73,
+        "input": [
+            "ABBABBABBAABBBBBBAABBBB",
+            "ABBBAABABBAABAABBABAABA",
+            "ABBBABBABBBBABBAAABBABA",
+            "BAAABABBABBAABBAABBAABB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 74,
+        "input": [
+            "ABAABABBABBABABBBAABABA",
+            "AAABBBABABABBBABBABAAAB",
+            "BBBBABBBBAAABBBABAABBBA",
+            "AAAAAAAAAAABABAAAABABBB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 75,
+        "input": [
+            "AAABABAAABBABBAABBAAABB",
+            "ABBABBBBBBAAABAABAABABA",
+            "AAAABABABABBABBBAABAAAA",
+            "ABBBAABBAAAABBBAABAAABB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 76,
+        "input": [
+            "AAABBAAABBAABBBAAAABBAB",
+            "ABABBABBBBABAAAABABBABB",
+            "AAAAAABAAAABABABBBBBBAA",
+            "AABABBABABBABAABBABAAAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 77,
+        "input": [
+            "AABABAAABBABABABAABBABB",
+            "BBBBBBBAAABBABBBBABABBA",
+            "BBABAAABAAABBABABABAAAA",
+            "BAAAAABABBAABABBAAABBBA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 78,
+        "input": [
+            "BBABAAABBAABAAAAAABAAAA",
+            "ABAABBBABABAABABABBABAB",
+            "BBAAAAABABABBAAAABBBAAB",
+            "BBBBABABBAAABABBBABBAAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 79,
+        "input": [
+            "BBBABBAAABAABBBAABABBBA",
+            "AAABBAABBBAAABBABBBBBBB",
+            "BBABBABABAABAAAABAABBBA",
+            "AABAAAAAAAAABBBAAAAAAAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 80,
+        "input": [
+            "ABAAABAAABAABABBAABBABA",
+            "BABBAAABABBABBBABBBBABA",
+            "AAAABBBAABAABBAABBABBBA",
+            "BABAAABBAABAABAABAABBBB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 81,
+        "input": [
+            "ABABABBAABAABAAABBBABAAABAAA",
+            "BABABBABAAABBBAAABBABBAABAAB",
+            "AAABBBABBBAABBAAABABBBBBAABA",
+            "BABBBBBBBABBABBAABAABABABBAB",
+            "BBABBABAABABAABAABBBAABBBBAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 82,
+        "input": [
+            "ABABBABAABBABABABBABABBBAAAA",
+            "BBABBBABAAAABAAABBBABBBAABAB",
+            "BBBBBBAABBABABAAAABBBBAABABA",
+            "ABBABAABAABABBABAAAAAAAAABAA",
+            "BBBAAAAAAABBAAABAABBBABBABAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 83,
+        "input": [
+            "BAAAAAAAAAABBBBABAAAAABAABBB",
+            "BAAAABBBBABBBBBAABAAAAAAABAA",
+            "BAAABABAABBBBAAAABBAAABBBAAB",
+            "ABBBBBBABBABABABABABAABBBBBA",
+            "ABABAAABBABBBBBBABBABAABAABA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 84,
+        "input": [
+            "BAABABBAABABBAAABBAAABBABABA",
+            "ABAAAABAABABBAAAABABBBBABABB",
+            "ABABAAAABBBBBABBAABABBBBBABA",
+            "ABBBABBAAABBABBBBBBBAAAAABAA",
+            "BABBBABBBBAAABBBAAABABBBAABB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 85,
+        "input": [
+            "AAABAAABBBBBBAABABABABABBABA",
+            "BABBABBABBBAABBABAABBBAAABBB",
+            "AAABBBBABAAAAAABBBBABBABBAAB",
+            "BABBBBBBABABBAABAABBABBBAAAB",
+            "BBAABBBAAAABBABBBBAAAABAAAAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 86,
+        "input": [
+            "ABAABBBABAAABABABABBABABABAA",
+            "BBBAABABBBBBBAABABBBBAAABABB",
+            "BBBBBBABBABBBAABBBBBABBBABAB",
+            "BBBAAABAAAABBAABABABBABABAAB",
+            "AAABBBBAAAABBABAAAABBABBAAAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 87,
+        "input": [
+            "AAAAABAAABBBABBABAABBBABABBB",
+            "BBABBBABABBBBBAABABBBAAABAAB",
+            "AABBBABAAAAAABBBBABBBBBAABAA",
+            "BBBABBAAABBBBBBAABABBAAABAAB",
+            "BABAAAABBBBABAABABAAAABBBBBA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 88,
+        "input": [
+            "BBABAAABBAABBABABBABAAAABBAA",
+            "ABBBBBABBAAABABABBBAAAAABAAB",
+            "BBBABAAAAAABBABABABBBBAABABB",
+            "ABAABABAAAAAAABABABAAABBABBB",
+            "ABABBBABABBBABABBAAAABBAAAAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 89,
+        "input": [
+            "BABBAAABAAABBABABAAABBBBABAB",
+            "AABBBBBBBBAABAABABABBAABABAA",
+            "BBBBAABABAAABABBABBBABABBABB",
+            "AAAAABBABABABABABBBBBBBAABAB",
+            "BAAAABBABBABBBAAABAABABBBBAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 90,
+        "input": [
+            "ABABBAAAAAABBBAAABABAABABABA",
+            "AAAABABAABAAAAABABAABBBBABBB",
+            "BAAABAABAAAABBAAABBBABABBBBA",
+            "BBBABAABABBAABBAAABBABBBAABB",
+            "AABABBABABBBAABBAABABABBBBBB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 91,
+        "input": [
+            "ABBBBAABABBBABABAABABBAAAAAB",
+            "BBAAAABAAAAABAAAABBAAAABABBA",
+            "AAAAAAAAABAABAAABAAAABABBAAB",
+            "ABBBAABABBBABBBAABBABBABAAAA",
+            "AAAABAAAAABBABBBAAAAAAABBAAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 92,
+        "input": [
+            "BABABAABABBBBABABBBAABABBAAA",
+            "BBBBABBAABBABAAABABABBBBBABA",
+            "ABBABBBBBABBBBBBBAAABAABABAA",
+            "BBABAABBAABBABBBABAABABBBBBA",
+            "BABBBBAABBBBABABBABBABBAABAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 93,
+        "input": [
+            "AAABBBBBBBBBBBAAABBBABBBABBB",
+            "BABBBBAAABBBAAABBBAAAAABAAAA",
+            "AABBABAABAAAAABABAABAAAABABB",
+            "BAABBABABBAABBABAAAABAAAAAAA",
+            "AABAAABAABBAAAAABAABAAAAABAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 94,
+        "input": [
+            "ABAAABAABBAABBBBBBAAABBAAAAB",
+            "BAAAAAABBAABBBABBBABBBBBBBBB",
+            "AABBABBBABBABABABABBABBAABBB",
+            "BABBABAABAAAABBAAABBBAABAABA",
+            "AABBAAABBBABBABABAAAABBBBAAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 95,
+        "input": [
+            "BBBABBABABBAAAAAABABABBAAABA",
+            "BABABBBBBBABABAABBABBBABABBB",
+            "AAABBABBBBBABAABAAABBABAABBA",
+            "BAAABBBABBBBBBAABBABAAABAABB",
+            "BBABBBBAABBABBBBAABBBAAABAAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 96,
+        "input": [
+            "BBAABBABAABBAAABABABBAABAAAB",
+            "BABABBBBAAAAABABAABBBBABBBAB",
+            "BAABBBBBBBBBAAAABBABBAAAABBA",
+            "BBBAAAABAAAABABABBABABAAAAAB",
+            "BBBAABABBAABAAAABBBAABBBABAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 97,
+        "input": [
+            "ABBBABAAABBBAAABBBBBBABBABAA",
+            "BBABBBABABBABAAABBAABBBABAAB",
+            "AAAABBBAAABABBBBAAAAAAAAAABA",
+            "BAAABAAABBAAAABAABBBABAAAABB",
+            "BAAAAAABBBBAABBBAABAABABABAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 98,
+        "input": [
+            "BBAAABABABBAABAAABAABBAAAAAA",
+            "BBAAABBAABAABAAABAABBABAABAA",
+            "ABBBBBAAAABAABBAABBABBAABBAA",
+            "AAABAABBAABAAABABABBBAAABBBB",
+            "BBBABABBBABBBBAAAABBABAAABAB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 99,
+        "input": [
+            "AAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "AAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "AAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "AAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "AAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    },
+    {
+        "case": 100,
+        "input": [
+            "BBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+            "BBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+            "BBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+            "BBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+            "BBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        ],
+        "expected": [
+            "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+        ]
+    }
+]
