@@ -1,8 +1,14 @@
 HEADS AA
 
+// Two heads to find pairs.
 START ** READ ** SR
+
+// If both cells contains the same value,
+// Replace the left one by an '@'.
 READ AA READ @A RR
 READ AB READ _B RR
 READ BB READ @B RR
 READ BA READ _A RR
+
+// If the right cell is empty, stop.
 READ *_ STOP __ RR

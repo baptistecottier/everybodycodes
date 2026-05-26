@@ -1,35 +1,37 @@
 HEADS AAAC
 
+// Movement of one head to the right and a second head downwards
+// The last head is used to write additionnal '@'
 START **** READ **** SRDD
 
+// If two pairs, write two '@'s using the fourth head
 READ AAA* READ @AA@ RRRR
 READ BBB* READ @BB@ RRRR
 
-READ AAB* READ @AB* RRRR
-READ BBA* READ @BA* RRRR
+// If one pair, write two '@'s by replacing the focused value
+READ *AB* READ @AB* RRRR
+READ *BA* READ @BA* RRRR
 
+// Else, replace focused value by an empty space
 READ ABB* READ _BB* RRRR
 READ BAA* READ _AA* RRRR
 
-READ BAB* READ @AB* RRRR
-READ ABA* READ @BA* RRRR
+// If cell at right is empty, end of line is reached and heads go down.
+READ A_B* DOWN __B* DDDS
+READ B_A* DOWN __A* DDDS
+READ A_A* DOWN @_A* DDDS
+READ B_B* DOWN @_B* DDDS
 
-READ A_B_ DOWN __B_ DDDS
-READ A_B@ DOWN __B@ DDDS
-READ B_A_ DOWN __A_ DDDS
-READ B_A@ DOWN __A@ DDDS
-READ A_A_ DOWN @_A_ DDDS
-READ A_A@ DOWN @_A@ DDDS
-READ B_B_ DOWN @_B_ DDDS
-READ B_B@ DOWN @_B@ DDDS
+// Whilst no empty value is found, go left, the activate READ state
+DOWN !*** DOWN **** LLLS
+DOWN _*_* READ **** RRRR
 
+// Last line is like part 1
 READ AB_* READ _B_* RRRR
 READ BB_* READ @B_* RRRR
 READ BA_* READ _A_* RRRR
 READ AA_* READ @A_* RRRR
 
+// If the cell below and at the right are neither A or B, stop.
 READ *__* STOP ___* SSSS
 READ *_@* STOP __@* SSSS
-
-DOWN !*** DOWN **** LLLS
-DOWN _*_* READ **** RRRR

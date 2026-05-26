@@ -1,11 +1,20 @@
 HEADS AA
 
+// Two heads to find pairs.
 START ** READ ** SR
+
+// If both cells contains the same value,
+// Replace the left one by an '@'.
 READ AA READ @A RR
 READ AB READ _B RR
 READ BB READ @B RR
 READ BA READ _A RR
+
+// If the right cell is empty, go next line.
 READ *_ DOWN __ DD
-DOWN !* DOWN ** LL
-DOWN _! READ ** RR
+// If both cells are empty when going next line, stop.
 DOWN __ STOP __ SS
+// Otherwise go left until an empty space is met, 
+DOWN !* DOWN ** LL
+// which is the start of a new line
+DOWN _! READ ** RR
