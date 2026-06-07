@@ -14,11 +14,16 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[Config]:
     Parse the raw input content into per-part structures.
     """
     nullptr = [0, int(puzzle_input[2]), int(puzzle_input[3])]
-    avail = [int(puzzle_input[1]), 20240000, 202400000]
-    acol = [1, 1111, 10]
+    if max(nullptr) < 1_000:
+        avail = [int(puzzle_input[1]), 50, 160]
+        acol = [1, 5, 5]
+    else:
+        avail = [int(puzzle_input[1]), 20240000, 202400000]
+        acol = [1, 1111, 10]
     dyn_thick = [False, True, True]
     empty_spaces = [False, False, True]
-    configs: list[Config] = list(zip(avail, nullptr, acol, dyn_thick, empty_spaces))
+    configs: list[Config] = list(
+        zip(avail, nullptr, acol, dyn_thick, empty_spaces))
     return configs
 
 

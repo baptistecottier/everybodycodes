@@ -9,7 +9,9 @@ Coords: TypeAlias = tuple[int, int]
 Herbs: TypeAlias = dict[Coords, str]
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[tuple[set[Coords], Herbs]]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[tuple[set[Coords], Herbs]]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -36,7 +38,6 @@ def solver(herb_maps: list[tuple[set[Coords], Herbs]]) -> Iterator[int]:
     for terrain, herbs in herb_maps[:2]:
         entry = {(x, y) for (x, y) in terrain if y == 0}.pop()
         yield collect_herbs(terrain, herbs, entry, entry)
-    yield len(herb_maps)
 
 
 def collect_herbs(

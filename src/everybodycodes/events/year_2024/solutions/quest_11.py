@@ -3,6 +3,7 @@ Event: The Kingdom of Algorithmia
 Quest: Biological Warfare
 """
 
+from collections import defaultdict
 from typing import Iterator, TypeAlias
 
 Conversions: TypeAlias = dict[str, list[str]]
@@ -14,7 +15,7 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[Conversions]:
     """
     parts_input: list[dict[str, list[str]]] = []
     for part_input in puzzle_input.values():
-        conversions: dict[str, list[str]] = {}
+        conversions: defaultdict[str, list[str]] = defaultdict(list)
         for line in part_input.splitlines():
             src, dst = line.split(":")
             conversions[src] = dst.split(",")
@@ -22,19 +23,23 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[Conversions]:
     return parts_input
 
 
-def solver(conversions: list[Conversions]) -> Iterator[int]:
+def solver(convs: list[Conversions]) -> Iterator[int]:
     """
     Solves termite population puzzles by calculating growth after specified
     days and finding population differences.
     """
-    for conversion, start, n_days in zip(conversions[:2], "AZ", [4, 10]):
-        yield count_termite_after_n_days(conversion, start, n_days)
+    conversions: list[Conversions] = convs[:2] + [convs[2]] * len(convs[2])
+    starts: list[str] = ['A', 'Z'] + list(convs[2].keys())
+    durations: list[int] = [4, 10] + [20] * len(convs[2])
 
-    conversion = conversions[2]
-    counts: list[int] = sorted(
-        count_termite_after_n_days(conversion, start, 20) for start in conversion.keys()
-    )
-    yield counts[-1] - counts[0]
+    counts = [
+        count_termite_after_n_days(conversion, start, n_days)
+        for conversion, start, n_days in zip(conversions, starts, durations)
+    ]
+
+    yield counts.pop(0)
+    yield counts.pop(0)
+    yield max(counts) - min(counts)
 
 
 def count_termite_after_n_days(
