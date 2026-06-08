@@ -102,7 +102,13 @@ def run_single_quest(
     script_dir/events/year_{year}/quest_{quest}, printing results for each
     part, skipping missing files and reporting an error if no solver is found.
     """
-    folder_path: str = "events/year" if event == "events" else "stories/story"
+    if event == "events":
+        folder_path = "events/year"
+    elif event == "stories":
+        folder_path = "stories/story"
+    elif event == "gridos":
+        folder_path = "gridos/gridos"
+        
     year_dir: str = os.path.join(script_dir, f"{folder_path}_{year}")
 
     # Support two layouts:
@@ -150,6 +156,153 @@ def run_single_quest(
                     break
     else:
         print(f"Error: No solver function found in {quest_file}")
+
+
+def run_gridos(
+    event: str,
+    quest: str,
+    part: str,
+    year: str | None = None,
+    case_id: str | None = None,
+) -> None:
+    """
+    Run a GridOS part using the part-based JSON test data.
+    """
+    from pathlib import Path
+
+    script_dir: str = os.path.dirname(os.path.abspath(__file__))
+    sys.path.insert(0, str(Path(script_dir).resolve().parent))
+
+    try:
+        from everybodycodes.gridos.gridOS import (
+            load_part_postprocessing,
+            run_cases_with_rules,
+            _load_callable_from_path,
+        )
+    except ImportError as exc:
+        print(f"Error: could not import GridOS support: {exc}")
+        return
+
+    if year is None:
+        print("Error: Missing GridOS year information")
+        return
+
+    part_map = {"1": "I", "2": "II", "3": "III"}
+    part_roman = part_map.get(str(part))
+    if part_roman is None:
+        print("Error: part must be 1, 2, or 3")
+        return
+
+    quest_num = str(int(quest))
+    part_number = str(int(part))
+    base_dir = Path(script_dir) / "gridos" / f"gridos_{year}"
+    test_cases_path = (
+        base_dir
+        / f"quest_{quest_num}"
+        / f"part_{part_roman}"
+        / f"test_cases_q{quest_num}p{part_number}.json"
+    )
+    rules_path = (
+        base_dir
+        / f"quest_{quest_num}"
+        / f"part_{part_roman}"
+        / f"q{quest_num}p{part_number}.rules"
+    )
+
+    if not test_cases_path.exists():
+        print(f"Error: GridOS test cases not found: {test_cases_path}")
+        return
+    if not rules_path.exists():
+        print(f"Error: GridOS rules file not found: {rules_path}")
+        return
+
+    cases = json.loads(test_cases_path.read_text(encoding="utf-8"))
+    normalized_cases = []
+    for case in cases:
+        normalized = dict(case)
+        if "input" in normalized and "data" not in normalized:
+            normalized["data"] = normalized.pop("input")
+        if "case" not in normalized and "id" in normalized:
+            normalized["case"] = normalized["id"]
+        normalized_cases.append(normalized)
+
+    postprocessing = load_part_postprocessing(
+        f"part_{part_roman.lower()}", quest=quest, base_dir=Path(script_dir) / "gridos"
+    )
+
+    if postprocessing is None:
+        quest_dir = base_dir / f"quest_{quest_num}"
+        alt_paths = [
+            quest_dir / "postprocessing.py",
+            quest_dir / f"part_{part_roman}" / "postprocessing.py",
+            quest_dir / f"part_{part_roman}" / f"postprocessing_q{quest_num}p{part_number}.py",
+        ]
+        for alt_path in alt_paths:
+            if alt_path.exists():
+                postprocessing = _load_callable_from_path(
+                    f"gridos_postprocessing_{quest_num}_{part_number}",
+                    alt_path,
+                )
+                if postprocessing is not None:
+                    break
+
+    results = run_cases_with_rules(
+        {"cases": normalized_cases}, rules_path, postprocessing=postprocessing
+    )
+
+    if case_id is not None:
+        results = [r for r in results if str(r["case"]) == str(case_id)]
+        if not results:
+            print(f"Error: case {case_id} not found for gridos quest {quest} part {part}")
+            return
+
+    total = len(results)
+    failures = [r for r in results if not _gridos_result_matches(r)]
+    total_steps = sum(r.get("steps", 0) for r in results)
+    total_rules = sum(r.get("rules", 0) for r in results)
+    total_states = sum(r.get("states", 0) for r in results)
+    total_heads = max((r.get("heads", 0) for r in results), default=0)
+
+    print(f"GridOS quest {quest} part {part} cases: {total}")
+    if failures:
+        print(f"  Failed: {len(failures)} / {total}")
+    else:
+        print(f"  Passed: {total} / {total}")
+    print(
+        f"  Heads: {total_heads}  States: {total_states}  Rules: {total_rules}  Steps: {total_steps}"
+    )
+
+    if failures and case_id is None:
+        print("Failed cases:")
+        for result in failures:
+            print(
+                f"  Case {result['case']}: output={result['output']} expected={result.get('expected')}"
+            )
+            if result.get("processed") is not None:
+                print(
+                    f"    processed={result['processed']} "
+                    f"expected_processed={result.get('expected_processed')}"
+                )
+
+    if case_id is not None:
+        for result in results:
+            print(f"Case {result['case']} result:")
+            print(f"  input = {result['input']}")
+            print(f"  output = {result['output']}")
+            print(f"  expected = {result.get('expected')}")
+            print(
+                f"  steps = {result.get('steps', 0)}, rules = {result.get('rules', 0)}, "
+                f"states = {result.get('states', 0)}"
+            )
+            if result.get("processed") is not None:
+                print(f"  processed = {result['processed']}")
+                print(f"  expected_processed = {result.get('expected_processed')}")
+
+
+def _gridos_result_matches(result: dict[str, Any]) -> bool:
+    if result.get("processed") is not None:
+        return result.get("processed") == result.get("expected_processed")
+    return result["output"] == result["expected"]
 
 
 def load_input_content(
@@ -723,7 +876,7 @@ def main() -> None:
     result.
     """
     if len(sys.argv) < 2:
-        print("Usage: python ec.py <year> [quest] [-test] [-all]")
+        print("Usage: python ec.py <year> [quest] [-test] [-all] [-case <id>]")
         print("Examples:")
         print(("  python ec.py 2024        # Run all quests of 2024 with real input"))
         print(
@@ -735,27 +888,34 @@ def main() -> None:
         print(("  python ec.py 2024 01     # Run quest 01 of 2024 with real input"))
         print(("  python ec.py 2024 01 -all # Validate all set inputs for quest 01"))
         print(("  python ec.py 2024 01 -test # Run quest 01 of 2024 with test input"))
+        print(("  python ec.py 2024 01 -case 1 # Run quest 01 with input case id 1"))
+        print(("  python ec.py 3001 1 1   # Run GridOS quest 1 part 1 for event 3001"))
         sys.exit(1)
 
     year: str = sys.argv[1]
-    if year[0] in "sS":
+    print("year: ", year)
+    if len(year) <= 2:
         event = "stories"
-        year: str = year[1:]
+        year = year.zfill(2)
+    elif year.startswith('3') and len(year) == 4:
+        event = "gridos"
+        year = year[2:]
     else:
         event = "events"
 
     args: list[str] = sys.argv[2:]
-    # parse -input <id> first and remove it from args to keep positional parsing clean
+    # parse -input / -case <id> first and remove it from args to keep positional parsing clean
     input_case: str | None = None
-    if "-input" in args:
-        try:
-            idx = args.index("-input")
-            input_case = args[idx + 1]
-            # remove both the flag and its value so they don't appear in positional
-            del args[idx : idx + 2]
-        except Exception:
-            print("Error: -input requires a case id argument")
-            sys.exit(1)
+    for case_flag in ("-input", "-case"):
+        if case_flag in args:
+            try:
+                idx = args.index(case_flag)
+                input_case = args[idx + 1]
+                del args[idx : idx + 2]
+            except Exception:
+                print(f"Error: {case_flag} requires a case id argument")
+                sys.exit(1)
+            break
 
     # detect -all1/-all2/-all3 to allow validating a single part across all cases
     only_all_part: int | None = None
@@ -784,6 +944,28 @@ def main() -> None:
         except Exception as exc:
             print(f"Error building inputs: {exc}")
             sys.exit(1)
+        return
+
+    if event == "gridos":
+        if all_mode:
+            print("Error: -all is not supported for gridos mode")
+            sys.exit(1)
+        if not positional:
+            print("Usage: python ec.py 3001 <quest> [part]")
+            sys.exit(1)
+
+        quest: str = positional[0].zfill(2)
+        if len(positional) >= 2:
+            part_arg = positional[1]
+            if not part_arg.isdigit() or int(part_arg) not in (1, 2, 3):
+                print("Error: Gridos part must be 1, 2, or 3")
+                sys.exit(1)
+            run_gridos(event, quest, str(int(part_arg)), year, case_id=input_case)
+            return
+
+        # If part is omitted, run all three parts for the given quest.
+        for part_arg in ("1", "2", "3"):
+            run_gridos(event, quest, part_arg, year, case_id=input_case)
         return
 
     if all_mode:

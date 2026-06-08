@@ -1,6 +1,4 @@
-# Everybody Codes - Puzzle Solutions
-
-My solutions for the **Everybody Codes** programming puzzles across multiple years.
+# Everybody Codes - Puzzle Solutions for Events
 
 
 ### The Kingdom of Algorithmia (2024) 🏰
@@ -29,7 +27,7 @@ My solutions for the **Everybody Codes** programming puzzles across multiple yea
 | 20    | ✅❌❌          |
 
 
-### The Song of Ducks and Dragons (2025) 🎤
+### The Song of Ducks and Dragons (2025) 🐲
 
 | Quest | Personal input | All inputs       | Average Time |
 |-------|----------------|:----------------:|--------------:|

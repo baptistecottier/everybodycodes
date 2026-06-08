@@ -130,8 +130,6 @@ class GridOSTuringMachine:
             write_char = matched_rule["write"][i]
             if write_char != "*":
                 self.grid[(pos[0], pos[1])] = write_char
-                if write_char == "_":
-                    del self.grid[(pos[0], pos[1])]
 
         for i, pos in enumerate(self.heads):
             d = matched_rule["dirs"][i]
@@ -170,7 +168,6 @@ class GridOSTuringMachine:
 
             if not continued:
                 break
-
         return {
             "output": self.get_clean_grid(),
             "heads": len(self.head_order),
@@ -191,7 +188,7 @@ class GridOSTuringMachine:
         output: list[str] = []
         for r in range(min_r, max_r + 1):
             row_str = "".join(
-                [self.grid.get((r, c), " ") for c in range(min_c, max_c + 1)]
+                [self.grid.get((r, c), "_") for c in range(min_c, max_c + 1)]
             )
             output.append(row_str)
         return "\n".join(output)
@@ -260,10 +257,6 @@ def load_part_rules(
             / f"part_{part_roman}"
         )
 
-        alt_path = quest_part_dir / f"rules_q{quest_num}p{part_number}.txt"
-        if alt_path.exists():
-            return alt_path
-
         legacy_path = quest_part_dir / f"q{quest_num}p{part_number}.rules"
         if legacy_path.exists():
             return legacy_path
@@ -317,42 +310,22 @@ def load_part_postprocessing(
 
 def _get_input_symbols(cases: list[dict[str, Any]]) -> set[str]:
     symbols: set[str] = set()
-    for case in cases:
-        for value in case.get("input", []):
-            symbols.update(str(value))
+    for case in cases['cases']:
+        symbols.update(str(case['data']))
     return symbols
 
 
-def count_effective_heads(rules_text: str, input_symbols: set[str]) -> int:
+def count_effective_heads(rules_text: str) -> int:
     lines = [
         line.strip()
         for line in rules_text.splitlines()
         if line.strip() and not line.strip().startswith("#")
     ]
-    if not lines:
-        return 0
-
-    if lines[0].startswith("HEADS"):
-        lines = lines[1:]
-    if not lines:
-        return 0
-
-    first_read = lines[0].split()[1] if len(lines[0].split()) >= 2 else ""
-    head_count = len(first_read)
-    effective = [False] * head_count
-
     for line in lines:
-        parts = line.split()
-        if len(parts) != 5:
-            continue
-        read = parts[1]
-        for idx, ch in enumerate(read):
-            if idx >= head_count:
-                continue
-            if ch == "*" or ch in input_symbols:
-                effective[idx] = True
+        if line.split()[0] == "HEADS":
+            return len(line.split()[1])
 
-    return sum(effective)
+    return 0
 
 
 def _normalize_grid_output(output_text: str) -> OutputTapes:
@@ -363,11 +336,15 @@ def _normalize_grid_output(output_text: str) -> OutputTapes:
     if len(lines) == 1:
         return [lines[0].rstrip()]
 
-    collapsed = "".join(ch for ch in output_text if ch not in {" ", "\n"})
-    if collapsed:
-        return [collapsed]
+    return lines
 
-    return [line.rstrip() for line in lines if line.strip() != ""]
+
+def _normalize_expected_output(expected: Any) -> OutputTapes:
+    if expected is None:
+        return [""]
+    if isinstance(expected, list):
+        return [str(line) for line in expected]
+    return _normalize_grid_output(str(expected))
 
 
 def _count_visible_symbols(output_tapes: OutputTapes | None) -> int | None:
@@ -388,8 +365,8 @@ def run_cases_with_rules(
     input_symbols = _get_input_symbols(cases)
     effective_heads = count_effective_heads(rules_text, input_symbols)
 
-    for case in cases:
-        input_values = case.get("input", [])
+    for case in cases['cases']:
+        input_values = case.get("data", [])
         grid_lines = [str(value) for value in input_values]
         interpreter = GridOSTuringMachine(rules_text, grid_lines)
         run_result = interpreter.run(max_steps=max_steps)
@@ -400,14 +377,18 @@ def run_cases_with_rules(
             postprocessing(output_tapes) if postprocessing is not None else None
         )
 
+        expected_tapes = _normalize_expected_output(case.get("expected"))
+        expected_processed = (
+            postprocessing(expected_tapes)
+            if postprocessing is not None
+            else _count_visible_symbols(expected_tapes)
+        )
         results.append(
             {
                 "case": case.get("case"),
                 "input": grid_lines,
                 "expected": case.get("expected"),
-                "expected_processed": _count_visible_symbols(
-                    case.get("expected")
-                ),
+                "expected_processed": expected_processed,
                 "output": output_tapes,
                 "processed": processed,
                 "steps": run_result.get("steps", 0),
