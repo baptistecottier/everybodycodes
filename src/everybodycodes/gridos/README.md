@@ -6,7 +6,7 @@ The tables shows best stats _individually_, not for a single set of rules.
 
 | Quest                         | Part                  | _#Heads_      | _#States_              | _#Rules_               | _#Steps_                |
 |-                              |------:                |:-----------:|:--------------------:|:--------------------:|:---------------------:|
-|1. The Battle for the Farmlands| I ✅<br>II ✅<br>III ✅| 1<br>1<br>2 | 296<br>296<br>592    | 580<br>852<br>2824   | 3820<br>6069<br>35730 |
+|1. The Battle for the Farmlands| I ✅<br>II ✅<br>III ✅| 1<br>1<br>2 | 200<br>200<br>592    | 484<br>668<br>2824   | 2620<br>2717<br>35730 |
 |2. The Runes of Power          | I ✅<br>II ✅<br>III ✅| 2<br>2<br>4 | 300<br>400<br>385    | 578<br>834<br>1351   | 2527<br>11409<br>11318|
 |3. Mining Maestro              | I ✅<br>II ✅<br>III ✅| 2<br>7<br>8 | 796<br>400<br>789    | 1287<br>854<br>3549   | 14473<br>4672<br>54390 |
 |4. Royal Smith's Puzzle        | I ✅<br>II ✅<br>III ✅| 3<br>2<br>3 | 400<br>798<br>1086    | 441<br>1699<br>2691   | 1000<br>39974<br>40978 |
