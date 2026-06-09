@@ -6,7 +6,9 @@ Quest: Whispers in the Shell
 from typing import Iterator
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[tuple[list[str], list[int]]]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[tuple[list[str], list[int]]]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -15,13 +17,16 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[tuple[list[str], list[in
         _names, _moves = note.split("\n\n")
         names: list[str] = _names.split(",")
         moves: list[int] = [
-            int(n) for n in _moves.replace("R", "").replace("L", "-").split(",")
+            int(n)
+            for n in _moves.replace("R", "").replace("L", "-").split(",")
         ]
         parts_inputs.append((names, moves))
     return parts_inputs
 
 
-def solver(sections: list[tuple[list[str], list[int]]]) -> Iterator[str]:
+def solver(
+    sections: list[tuple[list[str], list[int]]]
+) -> Iterator[str]:
     """
     Solve all puzzle parts for this quest.
     """

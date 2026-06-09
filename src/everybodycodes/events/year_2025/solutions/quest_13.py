@@ -6,7 +6,9 @@ Quest: Unlocking the Mountain
 from typing import Iterator
 
 
-def preprocessing(puzzle_inputs: dict[int, str]) -> list[list[int]]:
+def preprocessing(
+    puzzle_inputs: dict[int, str]
+) -> list[list[int]]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -19,14 +21,16 @@ def preprocessing(puzzle_inputs: dict[int, str]) -> list[list[int]]:
         ]
         values: list[int] = [1]
         for delta in (1, -1):
-            for line in lines[(delta == -1) :: 2][::delta]:
+            for line in lines[(delta == -1)::2][::delta]:
                 s, e = [int(x) for x in line.split("-")][::delta]
                 values += list(range(s, e + delta, delta))
         parts_inputs.append(values)
     return parts_inputs
 
 
-def solver(numbers: list[list[int]]) -> Iterator[int]:
+def solver(
+    numbers: list[list[int]]
+) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """

@@ -7,7 +7,9 @@ from math import ceil, floor, prod
 from typing import Iterator
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[list[list[int]]]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[list[list[int]]]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -20,16 +22,20 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[list[list[int]]]:
     return mills
 
 
-def solver(mills: list[list[list[int]]]) -> Iterator[int]:
+def solver(
+    mills: list[list[list[int]]]
+) -> Iterator[int]:
     """
     Calibrate mills
     """
-    yield floor(2025 * ratio(mills[0]))
-    yield ceil(10000000000000 / ratio(mills[1]))
+    yield floor(2_025 * ratio(mills[0]))
+    yield ceil(10_000_000_000_000 / ratio(mills[1]))
     yield floor(100 * ratio(mills[2]))
 
 
-def ratio(gears: list[list[int]]) -> float:
+def ratio(
+    gears: list[list[int]]
+) -> float:
     """
     Given a list of gears, return the number of full turns the last gear makes
     if the first one turns exactly once.

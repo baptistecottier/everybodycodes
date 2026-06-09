@@ -7,7 +7,9 @@ from math import prod
 from typing import Any, Generator
 
 
-def preprocessing(puzzle_inputs: dict[int, str]) -> list[list[int]]:
+def preprocessing(
+    puzzle_inputs: dict[int, str]
+) -> list[list[int]]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -17,7 +19,9 @@ def preprocessing(puzzle_inputs: dict[int, str]) -> list[list[int]]:
     return parts_inputs
 
 
-def solver(pattern_charm_spells: list[list[int]]) -> Generator[int, Any, None]:
+def solver(
+    pattern_charm_spells: list[list[int]]
+) -> Generator[int, Any, None]:
     """
     Solve all puzzle parts for this quest.
     """
@@ -55,9 +59,14 @@ def solver(pattern_charm_spells: list[list[int]]) -> Generator[int, Any, None]:
     # yield n_columns - 1
 
 
-def build_wall(spell: list[int], length: int) -> list[int]:
+def build_wall(
+    spell: list[int],
+    length: int
+) -> list[int]:
     """
     Build a wall by counting divisibility of spell numbers for each position.
     """
-    walls: list[int] = [sum((n + 1) % s == 0 for s in spell) for n in range(length)]
+    walls: list[int] = [
+        sum((n + 1) % s == 0 for s in spell)
+        for n in range(length)]
     return walls

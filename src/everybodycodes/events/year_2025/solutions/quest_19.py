@@ -7,7 +7,9 @@ from collections import defaultdict
 from typing import Iterator
 
 
-def preprocessing(puzzle_inputs: dict[int, str]):
+def preprocessing(
+    puzzle_inputs: dict[int, str]
+) -> list[list[tuple[int, ...]]]:
     """
     Parse the raw input content into per-part structures.
     """

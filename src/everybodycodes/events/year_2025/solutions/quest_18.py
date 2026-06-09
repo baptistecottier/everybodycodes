@@ -6,7 +6,9 @@ Quest: When Roots Remember
 from typing import Iterator
 
 
-def preprocessing(puzzle_inputs: dict[int, str]):
+def preprocessing(
+    puzzle_inputs: dict[int, str]
+) -> list[tuple[list[str], list[int], list[list[int]]]]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -52,7 +54,10 @@ def solver(
         yield sum_last_plant_energy
 
 
-def last_plant_energy(plants: list[str], free_thicknesses: list[int]) -> int:
+def last_plant_energy(
+    plants: list[str],
+    free_thicknesses: list[int]
+) -> int:
     """
     Calculate the energy of the last plant based on branch thickness and
     incoming energy from previous plants.
@@ -72,7 +77,10 @@ def last_plant_energy(plants: list[str], free_thicknesses: list[int]) -> int:
     return energy[-1]
 
 
-def incoming_energy(branches: list[str], plant_energy: list[int]):
+def incoming_energy(
+    branches: list[str],
+    plant_energy: list[int]
+) -> int:
     """
     Calculate the total incoming energy by summing the product of each
     branch's thickness and its corresponding plant's energy.

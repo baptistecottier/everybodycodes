@@ -71,7 +71,11 @@ def count_tiles(
     return sum(ell for _, ell in centers)
 
 
-def update_tiles(tiles: set[tuple[int, int]], w: int, h: int) -> set[tuple[int, int]]:
+def update_tiles(
+    tiles: set[tuple[int, int]],
+    w: int,
+    h: int
+) -> set[tuple[int, int]]:
     """
     Updates tiles based on a score calculated from neighboring tile positions,
     keeping tiles where the parity of neighbors matches the current tile state.

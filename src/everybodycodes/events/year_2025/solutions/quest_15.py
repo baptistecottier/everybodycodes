@@ -17,9 +17,10 @@ def preprocessing(
     """
     parts_inputs: list[tuple[set[Coord], Coord]] = []
     for part, note in puzzle_input.items():
-        if part == 3:
+        if part == 3 or note == '':
             continue
         instructions: list[str] = note.split(",")[::-1]
+
         walls: set[Coord] = set()
         x = y = 0
         dx = 0

@@ -6,7 +6,9 @@ Quest: Mentorship Matrix
 from typing import Iterator
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[str]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[str]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -14,7 +16,9 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[str]:
     return knights
 
 
-def solver(knights: list[str]) -> Iterator[int]:
+def solver(
+    knights: list[str]
+) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """
@@ -27,7 +31,11 @@ def solver(knights: list[str]) -> Iterator[int]:
 
 
 def count_pairs(
-    segment: str, back_dist: int, front_dist: int = 0, to_skip: str = "", rep: int = 1
+    segment: str,
+    back_dist: int,
+    front_dist: int = 0,
+    to_skip: str = "",
+    rep: int = 1
 ) -> int:
     """
     Count matching lower and upper case pairs within the scan window.

@@ -8,19 +8,32 @@ from math import ceil
 from typing import Iterator
 
 
-def preprocessing(puzzle_inputs: dict[int, str]) -> list[list[list[int]]]:
+def preprocessing(
+    puzzle_inputs: dict[int, str]
+) -> list[list[list[int]]]:
     """
     Parse the raw input content into per-part structures.
     """
-    parts_inputs: list[list[list[int]]] = []
-
+    areas: list[list[list[int]]] = []
     for puzzle_input in puzzle_inputs.values():
-        note: str = puzzle_input.replace("@", "0")
-        parts_inputs.append([list(map(int, list(line))) for line in note.splitlines()])
-    return parts_inputs
+        area: list[list[int]] = []
+        for line in puzzle_input.splitlines():
+            row: list[int] = []
+            for c in list(line):
+                if c == 'S':
+                    row.append(-1)
+                elif c == '@':
+                    row.append(0)
+                else:
+                    row.append(int(c))
+            area.append(row)
+        areas.append(area)
+    return areas
 
 
-def solver(volcanos_map: list[list[list[int]]]) -> Iterator[int]:
+def solver(
+    volcanos_map: list[list[list[int]]]
+) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """

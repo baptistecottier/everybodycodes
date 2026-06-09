@@ -6,7 +6,9 @@ Quest: The Scout Duck Protocol
 from typing import Iterator
 
 
-def preprocessing(puzzle_inputs: dict[int, str]) -> list[list[int]]:
+def preprocessing(
+    puzzle_inputs: dict[int, str]
+) -> list[list[int]]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -16,7 +18,9 @@ def preprocessing(puzzle_inputs: dict[int, str]) -> list[list[int]]:
     return parts_inputs
 
 
-def solver(ducks: list[list[int]]) -> Iterator[int]:
+def solver(
+    ducks: list[list[int]]
+) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """
@@ -24,7 +28,10 @@ def solver(ducks: list[list[int]]) -> Iterator[int]:
     yield run_simulations(ducks[1])
 
 
-def run_simulations(ducks: list[int], max_rounds: float = float("inf")) -> int:
+def run_simulations(
+    ducks: list[int],
+    max_rounds: float = float("inf")
+) -> int:
     """
     Simulate duck movements until they stabilize or max rounds is reached.
     """

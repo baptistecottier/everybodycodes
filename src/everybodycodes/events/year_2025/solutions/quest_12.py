@@ -10,7 +10,9 @@ Grid: TypeAlias = list[list[int]]
 Coordinates: TypeAlias = set[tuple[int, int]]
 
 
-def preprocessing(puzzle_inputs: dict[int, str]) -> list[Grid]:
+def preprocessing(
+    puzzle_inputs: dict[int, str]
+) -> list[Grid]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -22,7 +24,9 @@ def preprocessing(puzzle_inputs: dict[int, str]) -> list[Grid]:
     return parts_inputs
 
 
-def solver(layouts: list[Grid]) -> Iterator[int]:
+def solver(
+    layouts: list[Grid]
+) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """
@@ -30,11 +34,16 @@ def solver(layouts: list[Grid]) -> Iterator[int]:
     yield cnt_destroyed_w_n_ignition(layouts[1], 2, {(0, 0), (-1, -1)})
     grid = layouts[2]
     yield cnt_destroyed_w_n_ignition(
-        grid, 3, {(x, y) for y in range(len(grid)) for x in range(len(grid[0]))}
+        grid,
+        3,
+        {(x, y) for y in range(len(grid)) for x in range(len(grid[0]))}
     )
 
 
-def ignite(grid: Grid, seen: Coordinates) -> Coordinates:
+def ignite(
+    grid: Grid,
+    seen: Coordinates
+) -> Coordinates:
     """
     Spread ignition through grid from seen cells to adjacent cells with lower
     or equal values.
@@ -58,7 +67,11 @@ def ignite(grid: Grid, seen: Coordinates) -> Coordinates:
     return seen
 
 
-def cnt_destroyed_w_n_ignition(grid: Grid, n: int, starts: Coordinates) -> int:
+def cnt_destroyed_w_n_ignition(
+    grid: Grid,
+    n: int,
+    starts: Coordinates
+) -> int:
     """
     Find the sum of sizes of the three largest chain reactions when barrels
     are ignited in descending order of their values.

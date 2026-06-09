@@ -9,7 +9,9 @@ from typing import Iterator, TypeAlias
 Position: TypeAlias = tuple[int, int]
 
 
-def preprocessing(puzzle_inputs: dict[int, str]) -> list[list[str]]:
+def preprocessing(
+    puzzle_inputs: dict[int, str]
+) -> list[list[str]]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -19,7 +21,9 @@ def preprocessing(puzzle_inputs: dict[int, str]) -> list[list[str]]:
     return parts_inputs
 
 
-def solver(map_sections: list[list[str]]) -> Iterator[int]:
+def solver(
+    map_sections: list[list[str]]
+) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """
@@ -49,7 +53,9 @@ def solver(map_sections: list[list[str]]) -> Iterator[int]:
             seen.add((nx, ny))
 
 
-def maze_neighbours(maze: list[str]):
+def maze_neighbours(
+    maze: list[str]
+) -> defaultdict[tuple[int, int], set[tuple[int, int]]]:
     """
     Build adjacency graph of maze coordinates connected by 'T' tiles.
     """
@@ -61,7 +67,9 @@ def maze_neighbours(maze: list[str]):
             if x < len(line) - 1 and line[x + 1] in "SET":
                 neighbours[(x, y)].add((x + 1, y))
                 neighbours[(x + 1, y)].add((x, y))
-            if y < len(maze) - 1 and ((x + y) % 2 == 1) and maze[y + 1][x] in "SET":
+            if all((y < len(maze) - 1,
+                    ((x + y) % 2 == 1),
+                    maze[y + 1][x] in "SET")):
                 neighbours[(x, y)].add((x, y + 1))
                 neighbours[(x, y + 1)].add((x, y))
     return neighbours

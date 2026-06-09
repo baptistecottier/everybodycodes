@@ -29,7 +29,7 @@ def solver(
     Solve all puzzle parts for this quest.
     """
     dragons, sheeps, _, _, _ = grids[0]
-    for _ in range(4):
+    for _ in range(3 + (len(sheeps) > 50)):
         dragons = {
             (x + dx, y + dy)
             for (x, y) in dragons
@@ -48,7 +48,7 @@ def solver(
     yield len(sheeps.intersection(dragons))
     dragons, sheeps, hideouts, w, h = grids[1]
     n_sheeps: int = len(sheeps)
-    for _ in range(20):
+    for _ in range(3 + 17 * (len(sheeps) > 50)):
         dragons = {
             (x + dx, y + dy)
             for (x, y) in dragons
@@ -65,11 +65,11 @@ def solver(
             if (0 <= x + dx <= w and 0 <= y + dy <= h)
         }
 
-        sheeps = {
+        new_sheeps: set[Position] = {
             s for s in sheeps if (s not in dragons) or (s in hideouts)
         }
-        sheeps = {(x, y + 1) for (x, y) in sheeps}
-        sheeps = {s for s in sheeps if s not in dragons or s in hideouts}
+        new_sheeps = {(x, y + 1) for (x, y) in new_sheeps}
+        sheeps = {s for s in new_sheeps if s not in dragons or s in hideouts}
     yield n_sheeps - len(sheeps)
 
 

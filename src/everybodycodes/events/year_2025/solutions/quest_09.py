@@ -7,7 +7,9 @@ from itertools import combinations
 from typing import Iterator
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[list[tuple[int, str]]]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[list[tuple[int, str]]]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -23,7 +25,9 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[list[tuple[int, str]]]:
     return parts_inputs
 
 
-def solver(scales_adns: list[list[tuple[int, str]]]) -> Iterator[int]:
+def solver(
+    scales_adns: list[list[tuple[int, str]]]
+) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """
@@ -50,7 +54,9 @@ def solver(scales_adns: list[list[tuple[int, str]]]) -> Iterator[int]:
             yield sum(i for i, _ in max(families, key=len))
 
 
-def extract_families(adns: list[tuple[int, str]]) -> list[set[tuple[int, str]]]:
+def extract_families(
+    adns: list[tuple[int, str]]
+) -> list[set[tuple[int, str]]]:
     """
     Extract families of related ADN sequences based on similarity threshold.
     """
@@ -63,14 +69,18 @@ def extract_families(adns: list[tuple[int, str]]) -> list[set[tuple[int, str]]]:
             family.update(to_add)
             to_add = set()
             for j, ma in adns.copy():
-                if any((similarity(ma, mb) > 0.45 * len(ma)) for _, mb in family):
+                if any((similarity(ma, mb) > 0.45 * len(ma))
+                       for _, mb in family):
                     to_add.add((j, ma))
                     adns.remove((j, ma))
         families.append(family)
     return families
 
 
-def similarity(adn_a: str, adn_b: str) -> int:
+def similarity(
+    adn_a: str,
+    adn_b: str
+) -> int:
     """
     Count matching positions between two sequences.
     """

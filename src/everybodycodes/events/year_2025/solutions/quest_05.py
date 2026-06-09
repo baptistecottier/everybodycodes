@@ -7,7 +7,9 @@ from collections import deque
 from typing import Iterator
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[dict[int, list[int]]]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[dict[int, list[int]]]:
     """
     Parse puzzle input and return sword data organized by part.
     """
@@ -25,7 +27,9 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[dict[int, list[int]]]:
     return parts_inputs
 
 
-def solver(records: list[dict[int, list[int]]]) -> Iterator[int]:
+def solver(
+    records: list[dict[int, list[int]]]
+) -> Iterator[int]:
     """
     Solves the quest by building fishbone structures and calculating sword
     qualities.
@@ -38,7 +42,7 @@ def solver(records: list[dict[int, list[int]]]) -> Iterator[int]:
                 (
                     int("".join(fb[1::3])),  # Quality
                     [
-                        int("".join(fb[i : i + 3]))  # Level numbers
+                        int("".join(fb[i: i + 3]))  # Level numbers
                         for i in range(0, len(fb), 3)
                     ],
                     sword_id,
@@ -53,13 +57,16 @@ def solver(records: list[dict[int, list[int]]]) -> Iterator[int]:
                 yield qualities[0][0] - qualities[-1][0]
             case 3:
                 yield sum(
-                    n * sword_id for n, (_, _, sword_id) in enumerate(qualities, 1)
+                    n * sword_id
+                    for n, (_, _, sword_id) in enumerate(qualities, 1)
                 )
             case _:
                 raise ValueError("Part does not exist!")
 
 
-def build_fishbone(numbers: list[int]) -> list[str]:
+def build_fishbone(
+    numbers: list[int]
+) -> list[str]:
     """
     Builds a fishbone structure from a list of numbers. In the worst case,
     only one side of the spine is filled, requiring len(numbers) / 2 levels.

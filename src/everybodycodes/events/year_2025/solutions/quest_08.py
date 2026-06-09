@@ -7,7 +7,9 @@ from collections import defaultdict
 from typing import Iterator
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[list[int]]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[list[int]]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -17,7 +19,9 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[list[int]]:
     return parts_inputs
 
 
-def solver(nails_sequences: list[list[int]]) -> Iterator[int]:
+def solver(
+    nails_sequences: list[list[int]]
+) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """
@@ -35,7 +39,10 @@ def solver(nails_sequences: list[list[int]]) -> Iterator[int]:
             yield count_knots(sequence, 1)
 
 
-def count_knots(sequence: list[int], mode: int) -> int:
+def count_knots(
+    sequence: list[int],
+    mode: int
+) -> int:
     """
     Count knots formed by threads on nails.
     """

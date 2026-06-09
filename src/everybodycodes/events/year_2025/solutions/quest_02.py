@@ -13,11 +13,14 @@ class Complex:
     """
     Class representing complex numbers
     """
-
     real: int
     img: int
 
-    def update_and_verify(self, cycles: int, divisor: int) -> bool:
+    def update_and_verify(
+        self,
+        cycles: int,
+        divisor: int
+    ) -> bool:
         """
         Update self value for verification and checks if it remains between
         bounds.
@@ -28,21 +31,26 @@ class Complex:
             r.img = int(r.real * r.img * 2 / divisor) + self.img
             r.real = temp
             if not (
-                -1_000_000 <= r.real <= 1_000_000 and -1_000_000 <= r.img <= 1_000_000
+                -1_000_000 <= r.real <= 1_000_000
+                and -1_000_000 <= r.img <= 1_000_000
             ):
                 return False
         self.real = r.real
         self.img = r.img
         return True
 
-    def __str__(self) -> str:
+    def __str__(
+        self
+    ) -> str:
         """
         Format the complex number with the bracketed puzzle representation.
         """
         return f"[{self.real},{self.img}]"
 
 
-def preprocessing(puzzle_input: dict[int, str]):
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[Complex]:
     """
     Parse and returns complex numbers provided as part inputs.
     """
@@ -51,13 +59,15 @@ def preprocessing(puzzle_input: dict[int, str]):
         leftb: int = note.index("[")
         rightb: int = note.index("]")
         comma: int = note.index(",")
-        r = int(note[leftb + 1 : comma])
-        i = int(note[comma + 1 : rightb])
+        r = int(note[leftb + 1: comma])
+        i = int(note[comma + 1: rightb])
         parts_inputs.append(Complex(r, i))
     return parts_inputs
 
 
-def solver(numbers: list[Complex]) -> Iterator[Complex | int]:
+def solver(
+    numbers: list[Complex]
+) -> Iterator[Complex | int]:
     """
     Checks verification process with the first input then determine the number
     of points to engrave according to two different levels of precision.
