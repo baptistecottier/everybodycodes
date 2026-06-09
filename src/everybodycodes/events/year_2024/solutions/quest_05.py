@@ -9,7 +9,9 @@ from typing import Iterator, TypeAlias
 Dancers: TypeAlias = list[list[int]]
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[Dancers]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[Dancers]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -20,7 +22,9 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[Dancers]:
     return lines
 
 
-def solver(rounds_dancers: list[Dancers]) -> Iterator[int]:
+def solver(
+    rounds_dancers: list[Dancers]
+) -> Iterator[int]:
     """
     Yield solutions for each puzzle part by parsing the provided input
     content and invoking play with the corresponding parameters.
@@ -31,7 +35,11 @@ def solver(rounds_dancers: list[Dancers]) -> Iterator[int]:
         yield play(dancers, **kwargs)
 
 
-def play(dancers: Dancers, max_rounds: int = 0, n_shouts: int = 0) -> int:
+def play(
+    dancers: Dancers,
+    max_rounds: int = 0,
+    n_shouts: int = 0
+) -> int:
     """
     Simulate a four-column dancer rotation, tracking seen states and shout
     frequencies, and return either the most frequent shout upon cycle

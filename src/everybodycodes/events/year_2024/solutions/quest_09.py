@@ -6,14 +6,18 @@ Quest: Sparkling Bugs
 from typing import Iterator
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[list[int]]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[list[int]]:
     """
     Parse the raw input content into per-part structures.
     """
     return [list(map(int, pi.splitlines())) for pi in puzzle_input.values()]
 
 
-def solver(sparkballs: list[list[int]]) -> Iterator[int]:
+def solver(
+    sparkballs: list[list[int]]
+) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """
@@ -41,7 +45,10 @@ def solver(sparkballs: list[list[int]]) -> Iterator[int]:
         yield get_min_beetles(sbs, dots[: [4, 10, 18][part]])
 
 
-def get_min_beetles(sparkballs: list[int], dots: list[int]) -> int:
+def get_min_beetles(
+    sparkballs: list[int],
+    dots: list[int]
+) -> int:
     """
     Calculate the minimum number of beetles needed to collect exactly
     sparkballs using dynamic programming.

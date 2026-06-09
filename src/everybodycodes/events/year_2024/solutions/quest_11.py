@@ -9,7 +9,9 @@ from typing import Iterator, TypeAlias
 Conversions: TypeAlias = dict[str, list[str]]
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[Conversions]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[Conversions]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -23,7 +25,9 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[Conversions]:
     return parts_input
 
 
-def solver(convs: list[Conversions]) -> Iterator[int]:
+def solver(
+    convs: list[Conversions]
+) -> Iterator[int]:
     """
     Solves termite population puzzles by calculating growth after specified
     days and finding population differences.
@@ -43,7 +47,9 @@ def solver(convs: list[Conversions]) -> Iterator[int]:
 
 
 def count_termite_after_n_days(
-    conversions: Conversions, start: str, n_days: int
+    conversions: Conversions,
+    start: str,
+    n_days: int
 ) -> int:
     """
     Simulate termite conversions for a fixed number of days.

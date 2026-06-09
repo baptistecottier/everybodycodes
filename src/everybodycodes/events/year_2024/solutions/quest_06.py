@@ -9,7 +9,9 @@ from typing import Iterator, TypeAlias
 Tree: TypeAlias = defaultdict[str, set[str]]
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[Tree]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[Tree]:
     """
     Parse the raw input content into per-part structures.`
     """
@@ -23,7 +25,9 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[Tree]:
     return trees
 
 
-def solver(trees: list[Tree]) -> Iterator[str]:
+def solver(
+    trees: list[Tree]
+) -> Iterator[str]:
     """
     Solve all puzzle parts for this quest.
     """
@@ -32,7 +36,9 @@ def solver(trees: list[Tree]) -> Iterator[str]:
         yield "".join(f[0] for f in most_powerful_fruit(trees[part - 1]))
 
 
-def most_powerful_fruit(tree: Tree) -> list[str]:
+def most_powerful_fruit(
+    tree: Tree
+) -> list[str]:
     """
     Return the unique path (as a list of node labels) starting from 'RR' that
     terminates at '@' while ignoring 'BUG' and 'ANT' children, or return an

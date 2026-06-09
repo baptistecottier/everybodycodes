@@ -7,14 +7,18 @@ from collections.abc import Iterator
 from collections import defaultdict
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[str]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[str]:
     """
     Parse the per-part input dictionary into stripped part strings.
     """
     return list(puzzle_input.values())
 
 
-def solver(creatures: list[str]) -> Iterator[int]:
+def solver(
+    creatures: list[str]
+) -> Iterator[int]:
     """
     Yield the solution for each part by parsing dict input and counting
     potions.
@@ -23,7 +27,10 @@ def solver(creatures: list[str]) -> Iterator[int]:
         yield count_potions(*fight)
 
 
-def count_potions(level: int, creatures: str) -> int:
+def count_potions(
+    level: int,
+    creatures: str
+) -> int:
     """
     Calculate the total potions needed to defeat groups of creatures where
     creatures are grouped by the given level size, and each creature type has
@@ -35,7 +42,7 @@ def count_potions(level: int, creatures: str) -> int:
     potions = 0
 
     for i in range(0, len(creatures), level):
-        group: str = creatures[i : i + level]
+        group: str = creatures[i: i + level]
         potions += sum(cost[g] for g in group)
         score: int = level - group.count("x")
         potions += score * (score - 1)

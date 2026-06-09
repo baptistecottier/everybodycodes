@@ -7,7 +7,9 @@ from itertools import product
 from typing import Iterator
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[tuple[str, list[list[str]]]]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[tuple[str, list[list[str]]]]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -19,7 +21,9 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[tuple[str, list[list[str
     return parts_inputs
 
 
-def solver(messages: list[tuple[str, list[list[str]]]]) -> Iterator[str]:
+def solver(
+    messages: list[tuple[str, list[list[str]]]]
+) -> Iterator[str]:
     """
     Solve all puzzle parts for this quest.
     """
@@ -36,10 +40,14 @@ def solver(messages: list[tuple[str, list[list[str]]]]) -> Iterator[str]:
                     cipher = rotate_left(cipher, x, y)
                 idx = (idx + 1) % len(ops)
         plain: str = "".join(c for line in cipher for c in line)
-        yield plain[plain.index(">") + 1 : plain.index("<")]
+        yield plain[plain.index(">") + 1: plain.index("<")]
 
 
-def rotate_left(cipher: list[list[str]], x: int, y: int) -> list[list[str]]:
+def rotate_left(
+    cipher: list[list[str]],
+    x: int,
+    y: int
+) -> list[list[str]]:
     """
     Rotate the eight cells around one center one step counterclockwise.
     """
@@ -58,7 +66,11 @@ def rotate_left(cipher: list[list[str]], x: int, y: int) -> list[list[str]]:
     return cipher
 
 
-def rotate_right(cipher: list[list[str]], x: int, y: int) -> list[list[str]]:
+def rotate_right(
+    cipher: list[list[str]],
+    x: int,
+    y: int
+) -> list[list[str]]:
     """
     Rotate the eight cells around one center one step clockwise.
     """

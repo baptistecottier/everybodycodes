@@ -23,13 +23,14 @@ class Chamber:
         exit (Coord): The coordinate representing the exit point from the
         chamber.
     """
-
     maze: dict[Coord, int]
     exits: set[Coord]
     start: Coord
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[Chamber]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[Chamber]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -53,7 +54,9 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[Chamber]:
     return maps
 
 
-def solver(chambers: list[Chamber]) -> Iterator[int]:
+def solver(
+    chambers: list[Chamber]
+) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """
@@ -79,8 +82,7 @@ def solver(chambers: list[Chamber]) -> Iterator[int]:
                 if npos not in maze:
                     continue
                 nt: int = (
-                    t
-                    + 1
+                    t + 1
                     + min(
                         (maze[npos] - maze[(x, y)]) % 10,
                         (maze[(x, y)] - maze[npos]) % 10,

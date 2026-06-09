@@ -8,7 +8,9 @@ from collections import Counter
 from typing import Iterator
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[list[list[str]]]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[list[list[str]]]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -22,7 +24,7 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[list[list[str]]]:
         for w, n in enumerate(map(int, str_pulls.split(","))):
             wheel: list[str] = [
                 w
-                for w in [symbol[4 * w : 4 * w + 3] for symbol in symbols]
+                for w in [symbol[4 * w: 4 * w + 3] for symbol in symbols]
                 if w != "" and " " not in w
             ]
             idxs: list[int] = [0]
@@ -36,7 +38,9 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[list[list[str]]]:
     return parts_input
 
 
-def solver(wheels: str) -> Iterator[str | int]:
+def solver(
+    wheels: str
+) -> Iterator[str | int]:
     """
     Solves the quest by calculating wheel sequences and counting byte coins
     for the given input.
@@ -52,7 +56,9 @@ def solver(wheels: str) -> Iterator[str | int]:
     yield (pulls // n) * sum(byte_coins) + sum(byte_coins[: 1 + pulls % n])
 
 
-def count_byte_coins(sequence: str) -> int:
+def count_byte_coins(
+    sequence: str
+) -> int:
     """
     Count the number of byte coins by summing the excess occurrences beyond 2
     for each element in the sequence.

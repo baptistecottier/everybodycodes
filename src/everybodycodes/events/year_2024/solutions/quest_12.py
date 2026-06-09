@@ -8,7 +8,9 @@ from typing import Iterator, TypeAlias
 Targets: TypeAlias = list[tuple[int, int]]
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[Targets]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[Targets]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -32,7 +34,9 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[Targets]:
     return parts_input
 
 
-def solver(list_targets: list[Targets]) -> Iterator[int]:
+def solver(
+    list_targets: list[Targets]
+) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """

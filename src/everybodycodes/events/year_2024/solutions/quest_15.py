@@ -30,7 +30,9 @@ def preprocessing(
     return parts_input
 
 
-def solver(herb_maps: list[tuple[set[Coords], Herbs]]) -> Iterator[int]:
+def solver(
+    herb_maps: list[tuple[set[Coords], Herbs]]
+) -> Iterator[int]:
     """
     Solves the puzzle by finding entry point and collecting herbs from each
     terrain.
@@ -41,7 +43,10 @@ def solver(herb_maps: list[tuple[set[Coords], Herbs]]) -> Iterator[int]:
 
 
 def collect_herbs(
-    terrain: set[Coords], herbs: Herbs, start: Coords, end: Coords
+    terrain: set[Coords],
+    herbs: Herbs,
+    start: Coords,
+    end: Coords
 ) -> int:
     """
     Find the shortest path from start to end while collecting all required

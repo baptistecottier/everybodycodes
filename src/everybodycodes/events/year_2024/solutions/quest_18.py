@@ -21,14 +21,18 @@ class PalmFarm:
     w: int
     h: int
 
-    def values(self) -> tuple[Coordinates, Coordinates, int, int]:
+    def values(
+        self
+    ) -> tuple[Coordinates, Coordinates, int, int]:
         """
         Return the palm farm's channel, palms, width, and height.
         """
         return (self.channel, self.palms, self.w, self.h)
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[PalmFarm]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[PalmFarm]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -48,16 +52,19 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[PalmFarm]:
     return parts_inputs
 
 
-def solver(palmfarms: list[PalmFarm]) -> Iterator[int]:
+def solver(
+    palmfarms: list[PalmFarm]
+) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """
     for palmfarm in palmfarms[:2]:
         yield int(max(fill(palmfarm).values()))
-    # yield int(sum(fill(palmfarms[2]).values()))
 
 
-def fill(palmfarm: PalmFarm) -> dict[Position, float]:
+def fill(
+    palmfarm: PalmFarm
+) -> dict[Position, float]:
     """
     Spread water through the channel and record when each palm is reached.
     """
@@ -67,7 +74,9 @@ def fill(palmfarm: PalmFarm) -> dict[Position, float]:
     ]
     if starts == [set()]:
         starts = [
-            {(x, y)} for (px, py) in palms for (x, y) in get_neighbours(px, py, channel)
+            {(x, y)}
+            for (px, py) in palms
+            for (x, y) in get_neighbours(px, py, channel)
         ]
 
     mint: dict[Position, float] = {(-1, -1): float("inf")}
@@ -90,7 +99,11 @@ def fill(palmfarm: PalmFarm) -> dict[Position, float]:
     return mint
 
 
-def get_neighbours(x: int, y: int, channel: Coordinates):
+def get_neighbours(
+    x: int,
+    y: int,
+    channel: Coordinates
+) -> Coordinates:
     """
     Return orthogonal channel neighbours for one position.
     """

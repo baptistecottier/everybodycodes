@@ -10,11 +10,12 @@ Coords: TypeAlias = set[tuple[int, int]]
 Inscription: TypeAlias = tuple[list[str], list[str]]
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[Inscription]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[Inscription]:
     """
     Parse the raw input content into per-part structures.
     """
-    
     parts_input: list[Inscription] = []
     for _part in puzzle_input.values():
         _wrds, _sntcs = _part.split("\n\n")
@@ -24,7 +25,9 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[Inscription]:
     return parts_input
 
 
-def solver(inscriptions: list[Inscription]) -> Iterator[int]:
+def solver(
+    inscriptions: list[Inscription]
+) -> Iterator[int]:
     """
     Yield the counts of matched word positions for three puzzle parts using
     mirrored, transposed, and overlapping search variations based on input
@@ -34,7 +37,8 @@ def solver(inscriptions: list[Inscription]) -> Iterator[int]:
 
     words, sentences = inscriptions[1]
     yield len(
-        {pos for match in count_words(mirrored(words), sentences) for pos in match}
+        {pos for match in count_words(mirrored(words), sentences)
+         for pos in match}
     )
 
     words, sentences = inscriptions[2]
@@ -52,7 +56,9 @@ def solver(inscriptions: list[Inscription]) -> Iterator[int]:
     yield len(runic_symbols)
 
 
-def mirrored(lst: list[str]) -> list[str]:
+def mirrored(
+    lst: list[str]
+) -> list[str]:
     """
     Returns a list with original elements plus their reversed versions
     appended.
@@ -60,18 +66,23 @@ def mirrored(lst: list[str]) -> list[str]:
     return lst + [item[::-1] for item in lst]
 
 
-def transpose(sntcs: list[str]) -> list[str]:
+def transpose(
+    sntcs: list[str]
+) -> list[str]:
     """
     Transposes a list of strings by converting rows to columns.
     """
     w: int = len(sntcs[0])
     if any(len(sentence) != w for sentence in sntcs):
-        raise ValueError("All sentences must contain the same number of symbols")
+        raise ValueError(
+            "All sentences must contain the same number of symbols")
     return ["".join(sentence[i] for sentence in sntcs) for i in range(w)]
 
 
 def count_words(
-    wrds: list[str], grid: list[str], overlap: bool = False
+    wrds: list[str],
+    grid: list[str],
+    overlap: bool = False
 ) -> list[Coords]:
     """
     Finds all occurrences of words in a grid of sentences, returning sets of

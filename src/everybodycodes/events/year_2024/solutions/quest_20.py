@@ -10,26 +10,27 @@ from typing import Iterator, TypeAlias
 State: TypeAlias = tuple[int, int, int, int, int]
 
 
-def preprocessing(puzzle_inputs: dict[int, str]) -> list[list[list[int]]]:
+def preprocessing(
+    puzzle_inputs: dict[int, str]
+) -> list[list[list[int]]]:
     """
     Parse the raw input content into per-part structures.
     """
     parts_inputs: list[list[list[int]]] = []
+    converter = {
+        "+": 1, "-": -2, ".": -1, "#": 0, "S": -1, "A": -1, "B": -1, "C": -1}
     for puzzle_input in puzzle_inputs.values():
         grid: list[list[int]] = [
-            [
-                {"+": 1, "-": -2, ".": -1, "#": 0, "S": -1, "A": -1, "B": -1, "C": -1}[
-                    c
-                ]
-                for c in line
-            ]
+            [converter[c] for c in line]
             for line in puzzle_input.splitlines()
         ]
         parts_inputs.append(grid)
     return parts_inputs
 
 
-def solver(training_maps: list[list[list[int]]]) -> Iterator[float]:
+def solver(
+    training_maps: list[list[list[int]]]
+) -> Iterator[float]:
     """
     Search each sky grid for the maximum score reachable in 100 moves.
     """

@@ -10,27 +10,9 @@ from typing import TypeAlias
 NailLengths: TypeAlias = list[int]
 
 
-def min_level(nails: NailLengths) -> int:
-    """
-    Return the minimum nail length.
-
-    This typed wrapper exists to avoid type-checker warnings when passing
-    overloaded builtins like min as callbacks.
-    """
-    return min(nails)
-
-
-def median_level(nails: NailLengths) -> int:
-    """
-    Return the integer median nail length.
-
-    This typed wrapper exists to avoid type-checker warnings in callback
-    tuples used by solver.
-    """
-    return int(median(nails))
-
-
-def preprocessing(puzzle_input: str) -> list[NailLengths]:
+def preprocessing(
+    puzzle_input: str
+) -> list[NailLengths]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -40,7 +22,9 @@ def preprocessing(puzzle_input: str) -> list[NailLengths]:
     ]
 
 
-def solver(lengths: list[NailLengths]) -> Iterator[int]:
+def solver(
+    lengths: list[NailLengths]
+) -> Iterator[int]:
     """
     Yield three aggregated hammer_strikes results for the input parts,
     using min for the first two parts and median for the third.
@@ -52,6 +36,30 @@ def solver(lengths: list[NailLengths]) -> Iterator[int]:
     )
     for to_level in zip(lengths, target_levels):
         yield hammer_strikes(*to_level)
+
+
+def min_level(
+    nails: NailLengths
+) -> int:
+    """
+    Return the minimum nail length.
+
+    This typed wrapper exists to avoid type-checker warnings when passing
+    overloaded builtins like min as callbacks.
+    """
+    return min(nails)
+
+
+def median_level(
+    nails: NailLengths
+) -> int:
+    """
+    Return the integer median nail length.
+
+    This typed wrapper exists to avoid type-checker warnings in callback
+    tuples used by solver.
+    """
+    return int(median(nails))
 
 
 def hammer_strikes(nails: NailLengths, f: Callable[[NailLengths], int]) -> int:

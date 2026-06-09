@@ -10,7 +10,9 @@ Plans: TypeAlias = dict[str, tuple[int, ...]]
 Track: TypeAlias = tuple[int, ...]
 
 
-def preprocessing(puzzle_inputs: dict[int, str]) -> list[tuple[Plans, Track]]:
+def preprocessing(
+    puzzle_inputs: dict[int, str]
+) -> list[tuple[Plans, Track]]:
     """
     Parse the provided input content and return a list of (plans, track)
     tuples where plans map names to tuples of action integers and tracks are
@@ -60,7 +62,9 @@ S+= +=-== +=++=     =+=+=--=    =-= ++=     +=-  =+=++=-+==+ =++=-=-=--
     return part_inputs
 
 
-def solver(race_infos: list[tuple[Plans, Track]]) -> Iterator[str]:
+def solver(
+    race_infos: list[tuple[Plans, Track]]
+) -> Iterator[str]:
     """
     Run race simulations from inputs and yield two sorted ranking strings
     followed by the count of winning permutations for the final scenario.
@@ -109,7 +113,9 @@ def race(
     return ranks
 
 
-def get_track(raw_track: str) -> Track:
+def get_track(
+    raw_track: str
+) -> Track:
     """
     Return a tuple of integers representing the sequence of actions
     obtained by traversing the ASCII grid in data from the initial position to

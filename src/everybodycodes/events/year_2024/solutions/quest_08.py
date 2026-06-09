@@ -9,7 +9,9 @@ from typing import Iterator, TypeAlias
 Config: TypeAlias = tuple[int, int, int, bool, bool]
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[Config]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[Config]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -27,7 +29,9 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[Config]:
     return configs
 
 
-def solver(n_blocks: list[list[int]]) -> Iterator[int]:
+def solver(
+    n_blocks: list[list[int]]
+) -> Iterator[int]:
     """
     Solve all puzzle parts for this quest.
     """

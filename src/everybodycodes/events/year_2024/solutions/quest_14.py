@@ -10,7 +10,9 @@ Moves: TypeAlias = list[tuple[int, Coordinates]]
 GrowthPlan: TypeAlias = list[Moves]
 
 
-def preprocessing(puzzle_input: dict[int, str]) -> list[GrowthPlan]:
+def preprocessing(
+    puzzle_input: dict[int, str]
+) -> list[GrowthPlan]:
     """
     Parse the raw input content into per-part structures.
     """
@@ -41,7 +43,9 @@ def preprocessing(puzzle_input: dict[int, str]) -> list[GrowthPlan]:
     return parts_input
 
 
-def solver(growth_plans: list[GrowthPlan]) -> Iterator[int]:
+def solver(
+    growth_plans: list[GrowthPlan]
+) -> Iterator[int]:
     """
     Solves a 3D path-tracing puzzle by tracking visited coordinates and leaf
     positions across multiple input parts.
@@ -62,14 +66,19 @@ def solver(growth_plans: list[GrowthPlan]) -> Iterator[int]:
     yield len(segments[1][0])
     yield min(
         sum(
-            distance(leaf, (x, y, z), segments[2][0]) for leaf in segments[2][1]
+            distance(leaf, (x, y, z), segments[2][0])
+            for leaf in segments[2][1]
         )  # leaves
         for (x, y, z) in segments[2][0]
         if x == 0 and z == 0
     )  # trunk
 
 
-def distance(start: Coordinates, end: Coordinates, segments: set[Coordinates]) -> int:
+def distance(
+    start: Coordinates,
+    end: Coordinates,
+    segments: set[Coordinates]
+) -> int:
     """
     Calculate the shortest path distance between two points in a 3D grid using
     BFS.
