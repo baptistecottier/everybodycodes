@@ -15,7 +15,6 @@ class PalmFarm:
     """
     Represents a palm farm with water channels and palm tree locations.
     """
-
     channel: Coordinates
     palms: Coordinates
     w: int
