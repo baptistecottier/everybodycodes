@@ -1,4 +1,4 @@
-# Solutions for [Everybody Codes](everybody.codes) challenges
+# Solutions for [Everybody Codes](https://everybody.codes) challenges
 
 ### Legend:
 🦆 : **3** parts are solved <br>
