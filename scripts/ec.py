@@ -103,11 +103,11 @@ def run_single_quest(
     part, skipping missing files and reporting an error if no solver is found.
     """
     if event == "events":
-        folder_path = "events/year"
+        folder_path = "../src/everybodycodes/events/year"
     elif event == "stories":
-        folder_path = "stories/story"
+        folder_path = "../src/everybodycodes/stories/story"
     elif event == "gridos":
-        folder_path = "gridos/gridos"
+        folder_path = "../src/everybodycodes/gridos/gridos"
         
     year_dir: str = os.path.join(script_dir, f"{folder_path}_{year}")
 
@@ -174,7 +174,7 @@ def run_gridos(
     sys.path.insert(0, str(Path(script_dir).resolve().parent))
 
     try:
-        from everybodycodes.gridos.gridOS import (
+        from scripts.gridOS import (
             load_part_postprocessing,
             run_cases_with_rules,
             _load_callable_from_path,
@@ -695,10 +695,12 @@ def load_quest_module(quest_file, quest) -> types.ModuleType:
         )
         assert spec is not None
         quest_module: types.ModuleType = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = quest_module
         loader.exec_module(quest_module)
     else:
         assert spec is not None and spec.loader is not None
         quest_module: types.ModuleType = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = quest_module
         spec.loader.exec_module(quest_module)
     return quest_module
 
@@ -893,7 +895,6 @@ def main() -> None:
         sys.exit(1)
 
     year: str = sys.argv[1]
-    print("year: ", year)
     if len(year) <= 2:
         event = "stories"
         year = year.zfill(2)
