@@ -1,0 +1,8 @@
+HEADS AAA
+
+START ### SHIFT ### SRR
+SHIFT *** READ *** SSR
+
+READ #=* READ _#* DDD
+READ #|_ READ _#| DDD
+READ ___ STOP ___ SSS

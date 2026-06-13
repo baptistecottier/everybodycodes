@@ -363,7 +363,7 @@ def run_cases_with_rules(
     results: list[dict[str, Any]] = []
 
     input_symbols = _get_input_symbols(cases)
-    effective_heads = count_effective_heads(rules_text, input_symbols)
+    effective_heads = count_effective_heads(rules_text)
 
     for case in cases['cases']:
         input_values = case.get("data", [])

@@ -1,6 +1,16 @@
 # Everybody Codes - Puzzle Solutions for GridOS challenges
 
 The tables shows best stats _individually_, not for a single set of rules.
+<br>Each part `i` of quest `j` contains four files; one optimizing each ranking criterion.
+- number of read heads: `qjpi_heads.rules`
+- total number of states encountered: `qjpi_states.rules`
+- total number of rules used: `qjpi_rules.rules`
+- total number of steps required: `qjpi_steps.rules`.
+
+By default, the files `qjpi_steps.rules` is used by the runner, but you can specify the criterion to use. For example, to run the `2`nd part of the `3`rd quest of the `1` st GridOS event using the `heads` optimised rules:
+```
+uv run ec.py 3001 3 2 -c heads
+```
 
 ### GridOS Tournament [No. 1] 🏰
 

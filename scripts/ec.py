@@ -164,6 +164,7 @@ def run_gridos(
     part: str,
     year: str | None = None,
     case_id: str | None = None,
+    criterion: str = "steps"
 ) -> None:
     """
     Run a GridOS part using the part-based JSON test data.
@@ -195,7 +196,7 @@ def run_gridos(
 
     quest_num = str(int(quest))
     part_number = str(int(part))
-    base_dir = Path(script_dir) / "gridos" / f"gridos_{year}"
+    base_dir = Path(script_dir) / "../src/everybodycodes/gridos" / f"gridos_{year}"
     test_cases_path = (
         base_dir
         / f"quest_{quest_num}"
@@ -206,7 +207,7 @@ def run_gridos(
         base_dir
         / f"quest_{quest_num}"
         / f"part_{part_roman}"
-        / f"q{quest_num}p{part_number}.rules"
+        / f"q{quest_num}p{part_number}_{criterion}.rules"
     )
 
     if not test_cases_path.exists():
@@ -955,13 +956,17 @@ def main() -> None:
             print("Usage: python ec.py 3001 <quest> [part]")
             sys.exit(1)
 
+        if "-c" in args:
+            criterion = args[-1]
+        else:
+            criterion = "steps"
         quest: str = positional[0].zfill(2)
         if len(positional) >= 2:
             part_arg = positional[1]
             if not part_arg.isdigit() or int(part_arg) not in (1, 2, 3):
                 print("Error: Gridos part must be 1, 2, or 3")
                 sys.exit(1)
-            run_gridos(event, quest, str(int(part_arg)), year, case_id=input_case)
+            run_gridos(event, quest, str(int(part_arg)), year, input_case, criterion)
             return
 
         # If part is omitted, run all three parts for the given quest.
