@@ -9,7 +9,7 @@
 
 ## 🗓️ Events ([_detailed scores_](./src/everybodycodes/events/README.md))
 Year | Title                                                                               | 1<br>11 | 2<br>12 | 3<br>13 | 4<br>14 | 5<br>15 | 6<br>16 | 7<br>17 | 8<br>18 | 9<br>19 | 10<br>20|
------|-------                                                                              |:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+-----|-------                                                                              |--------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|
 2026 | [Lords of the Wings](./src/everybodycodes/events/year_2026/solutions)               | ⏲️<br>⏲️ | ⏲️<br>⏲️| ⏲️<br>⏲️ | ⏲️<br>⏲️ | ⏲️<br>⏲️ | ⏲️<br>⏲️| ⏲️<br>⏲️ | ⏲️<br>⏲️| ⏲️<br>⏲️ | ⏲️<br>⏲️|
 2025 | [The Song of Ducks<br> and Dragons](./src/everybodycodes/events/year_2025/solutions)| 🦆<br>🐥 | 🦆<br>🦆| 🦆<br>🦆 | 🦆<br>🦆 | 🦆<br>🐥 | 🦆<br>🐥| 🦆<br>🐥 | 🦆<br>🦆| 🦆<br>🦆 | 🐥<br>🐥|
 2024 | [The Kingdom of<br>Algorithmia](./src/everybodycodes/events/year_2024/solutions)    | 🦆<br>🦆 | 🦆<br>🐥| 🦆<br>🦆 | 🦆<br>🦆 | 🦆<br>🐥 | 🦆<br>🐥| 🦆<br>🦆 | 🦆<br>🐥| 🦆<br>🐥 | 🐥<br>🐣|
