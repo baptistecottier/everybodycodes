@@ -1,25 +1,22 @@
 # Solutions for [Everybody Codes](https://everybody.codes) challenges
 
 ### Legend:
-🦆 : **3** parts are solved <br>
+🦆 : all **3** parts are solved <br>
 🐥 : **2** parts are solved <br>
-🐣 : **1** part solved <br>
-🥚 : **0** part solved <br>
+🐣 : **1** part is solved <br>
+🥚 : **0** part is solved <br>
 ⏲️ : Quest not published yet <br>
 
-## Events ([detailed scores](./src/everybodycodes/events/README.md))
-Year | Title                                                                              | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10| 11| 12| 13| 14| 15| 16| 17| 18| 19| 20
------|-------                                                                             |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---
-2026 | [Lords of the Wings](./src/everybodycodes/events/year_2026/solutions)              | ⏲️| ⏲️ | ⏲️| ⏲️| ⏲️ | ⏲️| ⏲️| ⏲️ | ⏲️| ⏲️| ⏲️ | ⏲️| ⏲️| ⏲️ | ⏲️| ⏲️| ⏲️ | ⏲️| ⏲️| ⏲️   
-2025 | [The Song of Ducks and Dragons](./src/everybodycodes/events/year_2025/solutions)   | 🦆| 🦆 | 🦆| 🦆| 🦆 | 🦆| 🦆| 🦆 | 🦆| 🐥| 🐥 | 🦆| 🦆| 🦆 | 🐥| 🐥| 🐥 | 🦆| 🦆| 🐥
-2024 | [The Kingdom of Algorithmia](./src/everybodycodes/events/year_2024/solutions)      | 🦆| 🦆 | 🦆| 🦆| 🦆 | 🦆| 🦆| 🦆 | 🦆| 🐥| 🦆 | 🐥| 🦆| 🦆 | 🐥| 🐥| 🦆 | 🐥| 🐥| 🐣
+## 🗓️ Events ([_detailed scores_](./src/everybodycodes/events/README.md))
+Year | Title                                                                               | 1<br>11 | 2<br>12 | 3<br>13 | 4<br>14 | 5<br>15 | 6<br>16 | 7<br>17 | 8<br>18 | 9<br>19 | 10<br>20|
+-----|-------                                                                              |:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|:-------:|
+2026 | [Lords of the Wings](./src/everybodycodes/events/year_2026/solutions)               | ⏲️<br>⏲️ | ⏲️<br>⏲️| ⏲️<br>⏲️ | ⏲️<br>⏲️ | ⏲️<br>⏲️ | ⏲️<br>⏲️| ⏲️<br>⏲️ | ⏲️<br>⏲️| ⏲️<br>⏲️ | ⏲️<br>⏲️|
+2025 | [The Song of Ducks<br> and Dragons](./src/everybodycodes/events/year_2025/solutions)| 🦆<br>🐥 | 🦆<br>🦆| 🦆<br>🦆 | 🦆<br>🦆 | 🦆<br>🐥 | 🦆<br>🐥| 🦆<br>🐥 | 🦆<br>🦆| 🦆<br>🦆 | 🐥<br>🐥|
+2024 | [The Kingdom of<br>Algorithmia](./src/everybodycodes/events/year_2024/solutions)    | 🦆<br>🦆 | 🦆<br>🐥| 🦆<br>🦆 | 🦆<br>🦆 | 🦆<br>🐥 | 🦆<br>🐥| 🦆<br>🦆 | 🦆<br>🐥| 🦆<br>🐥 | 🐥<br>🐣|
 
 
-<div style="display: flex; gap: 0rem; flex-wrap: wrap;">
 
-<div style="flex: 1 1 300px;">
-
-## Stories ([detailed scores](./src/everybodycodes/stories/README.md))
+## 🕒 Stories ([_detailed scores_](./src/everybodycodes/stories/README.md))
 \# | Title                                                                  | 1 | 2 | 3 |
 --|-------                                                                  |---|---|---|
 4|[The Digital Atelier](./src/everybodycodes/stories/story_04/solutions)    | ⏲️| ⏲️ | ⏲️|
@@ -27,15 +24,8 @@ Year | Title                                                                    
 2|[The Entertainment Hub](./src/everybodycodes/stories/story_02/solutions)  | 🦆| 🦆 | 🦆|
 1|[Echoes of Enigmatus](./src/everybodycodes/stories/story_01/solutions)    | 🦆| 🦆 | 🦆|
 
-</div>
-
-<div style="flex: 1 1 200px;">
-
-## GridOS ([detailed scores](./src/everybodycodes/gridos/README.md))
+## 🧮 GridOS ([_detailed scores_](./src/everybodycodes/gridos/README.md))
 \# | Title                                                       | 1 | 2 | 3 | 4 | 5 |
 --|-------                                                       |---|---|---|---|---|
 1|[GridOS Tournament](./src/everybodycodes/gridos/gridos_01/)    | 🦆| 🦆 | 🦆| 🦆 | 🦆
 
-</div>
-
-</div>
