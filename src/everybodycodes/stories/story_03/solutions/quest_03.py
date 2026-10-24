@@ -6,7 +6,7 @@ Quest: Plug and Play
 from dataclasses import dataclass
 from typing import Iterator
 
-from parse import Match, parse, Result. # type: ignore
+from parse import Match, parse, Result  # type: ignore
 
 
 @dataclass
