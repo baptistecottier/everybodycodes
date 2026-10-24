@@ -1,11 +1,12 @@
 """
-Solution for stories.story_03.quest_03.quest_03
+Story: Melody Made of Code
+Quest: Plug and Play
 """
 
 from dataclasses import dataclass
 from typing import Iterator
 
-from parse import Match, parse, Result  # type: ignore
+from parse import Match, parse, Result. # type: ignore
 
 
 @dataclass
@@ -23,7 +24,8 @@ class Node:
 
     def checksum(self, order: list[int]) -> int:
         """
-        Collect the node ids in order and return the checksum.
+        Collect the node ids in order (left subtree, node, right subtree)
+        and return the sum of each id multiplied by its rank.
         """
         node = self
         if node.left_plug is not None:
@@ -46,7 +48,7 @@ def preprocessing(
     puzzle_inputs: dict[int, str]
 ) -> list[list[Node]]:
     """
-    Parse the raw input content into per-part structures.
+    Parse each part into its list of nodes, in input order.
     """
     parts_inputs: list[list[Node]] = []
 
@@ -98,7 +100,8 @@ def place(to_place: Node, node: Node, level: int) -> bool:
 
 def match(node_a: str, node_b: str, level: int) -> bool:
     """
-    Whether a socket and a plug match at the given level.
+    Whether a socket and a plug match: both colour and shape at level 1,
+    colour or shape at level 2.
     """
     if level == 1:
         return node_a == node_b
@@ -110,11 +113,10 @@ def match(node_a: str, node_b: str, level: int) -> bool:
 
 def build_tree(nodes: list[Node], level: int) -> Node:
     """
-    Build a tree structure from nodes based on strength matching criteria.
+    Build a tree from the first node by plugging in each following node.
     """
     tree = nodes.pop(0)
     while nodes:
         node = nodes.pop(0)
         place(node, tree, level)
-    print(tree)
     return tree
