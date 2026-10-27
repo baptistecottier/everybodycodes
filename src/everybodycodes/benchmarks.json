@@ -5,7 +5,7 @@
       "1": {"title": "The Battle for the Farmlands", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0011, "date": "2026-10-23", "code": "db59326d21c13142949655ad37bdc7b54c26b1ed"},
       "2": {"title": "The Runes of Power", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.2239, "date": "2026-10-23", "code": "7e1719b7221342bbb17b56a49e69196bc26e61c8"},
       "3": {"title": "Mining Maestro", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0079, "date": "2026-10-23", "code": "7f8da49fb11cdccecdf80b227d6f80666073eb76"},
-      "4": {"title": "Royal Smith's Puzzle", "status": "error", "parts": ["missing", "missing", "missing"], "time": null, "date": "2026-10-23", "error": "AttributeError: 'dict' object has no attribute 'split'", "code": "44c541c738a5fdd7bb56c899bbd144e3fe051ef1"},
+      "4": {"title": "Royal Smith's Puzzle", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0001, "date": "2026-10-27", "code": "f061313ec408a8be42b93d20e8c44cdfec9ec368"},
       "5": {"title": "Pseudo-Random Clap Dance", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 1.0407, "date": "2026-10-23", "code": "b9b06dc150ceb3126c81db58e4e79c548e143360"},
       "6": {"title": "The Tree of Titans", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0058, "date": "2026-10-23", "code": "a5ce83dc174cc5d0f997497cb03bb5e928760a89"},
       "7": {"title": "Not Fast but Furious", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 4.5126, "date": "2026-10-23", "code": "54749d5c219219b488a14cb914cafa3bbd173401"},

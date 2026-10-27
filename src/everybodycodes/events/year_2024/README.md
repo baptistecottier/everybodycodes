@@ -2,13 +2,13 @@
 
 [Scoreboard](../../../../README.md#scoreboard) · [2025 →](../year_2025/README.md)
 
-| Stars | 47/60 |
+| Stars | 50/60 |
 | :-- | --: |
-| `█` solved in under 5 s | 12 |
+| `█` solved in under 5 s | 13 |
 | `▓` solved in under 5 min | 0 |
 | `▒` two parts only | 5 |
 | `░` one part only | 1 |
-| ` ` not solved | 2 |
+| ` ` not solved | 1 |
 | Time of solved quests | 9.3 s |
 
 | Quest | Puzzle | Solution | Time |
@@ -16,7 +16,7 @@
 | 1 | [The Battle for the Farmlands](https://everybody.codes/event/2024/quests/1) | `█` [★★★](solutions/quest_01.py) | 1 ms |
 | 2 | [The Runes of Power](https://everybody.codes/event/2024/quests/2) | `█` [★★★](solutions/quest_02.py) | 224 ms |
 | 3 | [Mining Maestro](https://everybody.codes/event/2024/quests/3) | `█` [★★★](solutions/quest_03.py) | 8 ms |
-| 4 | [Royal Smith's Puzzle](https://everybody.codes/event/2024/quests/4) | ` ` [☆☆☆](solutions/quest_04.py) | error |
+| 4 | [Royal Smith's Puzzle](https://everybody.codes/event/2024/quests/4) | `█` [★★★](solutions/quest_04.py) | < 1 ms |
 | 5 | [Pseudo-Random Clap Dance](https://everybody.codes/event/2024/quests/5) | `█` [★★★](solutions/quest_05.py) | 1.0 s |
 | 6 | [The Tree of Titans](https://everybody.codes/event/2024/quests/6) | `█` [★★★](solutions/quest_06.py) | 6 ms |
 | 7 | [Not Fast but Furious](https://everybody.codes/event/2024/quests/7) | `█` [★★★](solutions/quest_07.py) | 4.5 s |
