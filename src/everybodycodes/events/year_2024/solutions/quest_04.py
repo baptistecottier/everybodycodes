@@ -11,14 +11,14 @@ NailLengths: TypeAlias = list[int]
 
 
 def preprocessing(
-    puzzle_input: str
+    puzzle_input: dict[int, str]
 ) -> list[NailLengths]:
     """
     Parse the raw input content into per-part structures.
     """
     return [
         list(map(int, _nails.strip().splitlines()))
-        for _nails in puzzle_input.split("---")
+        for _nails in puzzle_input.values()
     ]
 
 
