@@ -15,3 +15,7 @@ wheels/
 # MacOS generated files
 .DS_Store
 .env
+
+# Editor / tooling
+.vscode/
+.puzzle-submitter/
