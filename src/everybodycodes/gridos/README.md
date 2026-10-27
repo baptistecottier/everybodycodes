@@ -7,9 +7,9 @@ The tables shows best stats _individually_, not for a single set of rules.
 - total number of rules used: `qjpi_rules.rules`
 - total number of steps required: `qjpi_steps.rules`.
 
-By default, the `steps` criterion is used by the runner, but you can specify the one to use with the `-c` parameter. For example, to run the `2`nd part of the `3`rd quest of the `1` st GridOS event using the `heads` optimised rules:
+By default, the `steps` criterion is used by the runner, but you can specify the one to use with the `--criterion` parameter. For example, to run the `2`nd part of the `3`rd quest of the `1` st GridOS event using the `heads` optimised rules:
 ```
-uv run ec.py 3001 3 2 -c heads
+uv run ec.py gridos 1 3 2 --criterion heads
 ```
 
 ### GridOS Tournament [No. 1] 🏰
