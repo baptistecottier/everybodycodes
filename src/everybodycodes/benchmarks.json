@@ -1,0 +1,74 @@
+{
+  "meta": {"timeout": 300, "machine": "Apple M3", "date": "2026-10-27", "python": "3.13.14"},
+  "events": {
+    "2024": {
+      "1": {"title": "The Battle for the Farmlands", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0011, "date": "2026-10-23", "code": "db59326d21c13142949655ad37bdc7b54c26b1ed"},
+      "2": {"title": "The Runes of Power", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.2239, "date": "2026-10-23", "code": "7e1719b7221342bbb17b56a49e69196bc26e61c8"},
+      "3": {"title": "Mining Maestro", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0079, "date": "2026-10-23", "code": "7f8da49fb11cdccecdf80b227d6f80666073eb76"},
+      "4": {"title": "Royal Smith's Puzzle", "status": "error", "parts": ["missing", "missing", "missing"], "time": null, "date": "2026-10-23", "error": "AttributeError: 'dict' object has no attribute 'split'", "code": "44c541c738a5fdd7bb56c899bbd144e3fe051ef1"},
+      "5": {"title": "Pseudo-Random Clap Dance", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 1.0407, "date": "2026-10-23", "code": "b9b06dc150ceb3126c81db58e4e79c548e143360"},
+      "6": {"title": "The Tree of Titans", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0058, "date": "2026-10-23", "code": "a5ce83dc174cc5d0f997497cb03bb5e928760a89"},
+      "7": {"title": "Not Fast but Furious", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 4.5126, "date": "2026-10-23", "code": "54749d5c219219b488a14cb914cafa3bbd173401"},
+      "8": {"title": "A Shrine for Nullpointer", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.6245, "date": "2026-10-23", "code": "7957f85c590603b6c305c65d5da232991fba86f1"},
+      "9": {"title": "Sparkling Bugs", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.1687, "date": "2026-10-23", "code": "37875d73e645c638ea7022ddd3c83117600c9627"},
+      "10": {"title": "Shrine Needs to Shine", "status": "error", "parts": ["missing", "missing", "missing"], "time": null, "date": "2026-10-23", "error": "AttributeError: module 'benchmarked_solution' has no attribute 'solver'", "code": "97b7a19c25596befdf19cb1fd419490164f714a5"},
+      "11": {"title": "Biological Warfare", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0489, "date": "2026-10-23", "code": "f3d41a8ba7fbf31d43b9a7b3ab4944757a234172"},
+      "12": {"title": "Desert Shower", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.0003, "date": "2026-10-23", "code": "0954d7c86bb49d071e058a596c2793ad827f7d4e"},
+      "13": {"title": "Never Gonna Let You Down", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0345, "date": "2026-10-23", "code": "76af7917e6e94dd8daf03d9449c53c78ef8a8d36"},
+      "14": {"title": "The House of Palms", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 2.5099, "date": "2026-10-23", "code": "dd4e3d0e8ed259deddcfe04809ecb2a7e682c9f2"},
+      "15": {"title": "From the Herbalist's Diary", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.0664, "date": "2026-10-23", "code": "dd6eeff43ef0fa195f805a64e3d048836a69f6ab"},
+      "16": {"title": "Cat Grin of Fortune", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.1007, "date": "2026-10-23", "code": "f9791536a2ea24f847561e2f9127f1c233028641"},
+      "17": {"title": "Galactic Geometry", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.1467, "date": "2026-10-23", "code": "9d73e3527ce0053f11517a3f6ceed6f5317a559e"},
+      "18": {"title": "The Ring", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 1.9969, "date": "2026-10-23", "code": "7338d62cb11815c5f184983625e6fda7d533fbe2"},
+      "19": {"title": "Encrypted Duck", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.0326, "date": "2026-10-23", "code": "6cf584bf3dec0b21fe14bbac5b4377acb2033292"},
+      "20": {"title": "Gliding Finale", "status": "wrong", "parts": ["ok", "unknown", "missing"], "time": 1.078, "date": "2026-10-23", "code": "8758faefe7f307a79ba5deeecd07a98074139a1b"}
+    },
+    "2025": {
+      "1": {"title": "Whispers in the Shell", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0001, "date": "2026-10-23", "code": "5d7cc3918be84f63d29b90323c4ab0aac8dc4bb0"},
+      "2": {"title": "From Complex to Clarity", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 11.0866, "date": "2026-10-23", "code": "e4864037914bec8c8f03fedf8d96a8e6c5fc9213"},
+      "3": {"title": "The Deepest Fit", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.3715, "date": "2026-10-23", "code": "c810e1383997a43f61f1e839147526eb5132a16b"},
+      "4": {"title": "Teeth of the Wind", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0002, "date": "2026-10-23", "code": "db10b21f479d2a0d28eebf330e0ad35c73b29cc3"},
+      "5": {"title": "Fishbone Order", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0098, "date": "2026-10-23", "code": "10977e4d54a17268a6d3229d55e47e0ced39289b"},
+      "6": {"title": "Mentorship Matrix", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.5052, "date": "2026-10-23", "code": "4731677c588252210824a5b60683bc0369e93ddf"},
+      "7": {"title": "Namegraph", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.2934, "date": "2026-10-23", "code": "f4b2713f5849dcf40e6f710b45c2007aa0083b0d"},
+      "8": {"title": "The Art of Connection", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 7.2836, "date": "2026-10-23", "code": "7182f28a381c3aedbf913a412be7c02a8b42f230"},
+      "9": {"title": "Encoded in the Scales", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 2.4576, "date": "2026-10-23", "code": "6424675cddc1da7f00eebdd8c3ef93b9536e8c35"},
+      "10": {"title": "Feast on the Board", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.0241, "date": "2026-10-23", "code": "d590eb4d22d0b720f261b17d8caa7229a9e3c6c2"},
+      "11": {"title": "The Scout Duck Protocol", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 10.9816, "date": "2026-10-23", "code": "8bb8152972c4b6b7182f6c7dc72ba9d1a5e7ca7a"},
+      "12": {"title": "One Spark to Burn Them All", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 1.8957, "date": "2026-10-23", "code": "2ebbd418a2aa13f0f79acc8b53d0ec65da9ccb9e"},
+      "13": {"title": "Unlocking the Mountain", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 2.9132, "date": "2026-10-23", "code": "e312aea431d577319f3f10579bff6aecc2ed14ba"},
+      "14": {"title": "The Game of Light", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 3.8235, "date": "2026-10-23", "code": "25ee9d5f3f429e1f21a237a643210c09c2de1a8e"},
+      "15": {"title": "Definitely Not a Maze", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.2346, "date": "2026-10-23", "code": "3121ea3fb64b73b12ab65d36888f376fd7b3cf15"},
+      "16": {"title": "Harmonics of Stone", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.0001, "date": "2026-10-23", "code": "b21f9a78fb85223298265830f79908c0dcf2d8c4"},
+      "17": {"title": "Deadline-Driven Development", "status": "wrong", "parts": ["wrong", "wrong", "missing"], "time": 0.0029, "date": "2026-10-23", "code": "0c16f873fbd7970994efefbf2fc72639bc760640"},
+      "18": {"title": "When Roots Remember", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0137, "date": "2026-10-23", "code": "acec14c2037eb834e32308ce4e946e4d23a0978d"},
+      "19": {"title": "Flappy Quack", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.495, "date": "2026-10-23", "code": "96ebe83eed529fdad22d9bf112eebeca0e12080e"},
+      "20": {"title": "Dream in Triangles", "status": "error", "parts": ["ok", "missing", "missing"], "time": null, "date": "2026-10-23", "error": "IndexError: list index out of range", "code": "e7128b26e31577b281f4e3b047e173eb9d066d2c"}
+    },
+    "2026": {
+      "1": {"title": "The Coneservation", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0003, "date": "2026-10-27", "code": "ebaa307869a55a120e5814c5bf0d5ce756f9b8f1"}
+    }
+  },
+  "stories": {
+    "1": {
+      "1": {"title": "EniCode", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.4181, "date": "2026-10-23", "code": "62600dbb7114fa36ad1a6bc90683a9a3fe64e158"},
+      "2": {"title": "Tangled Trees", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0176, "date": "2026-10-23", "code": "02703601ddb9330375e2d87a23399e8753229163"},
+      "3": {"title": "The Conical Snail Clock", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0004, "date": "2026-10-23", "code": "e71c9bc3690330cc66744508c1a7da190e2ae3f2"}
+    },
+    "2": {
+      "1": {"title": "Nail Down Your Luck", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 8.3624, "date": "2026-10-23", "code": "c8c49abae9efcc15d64364f5f67dd16e3fc7438b"},
+      "2": {"title": "The Pocket-Money Popper", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 2.0266, "date": "2026-10-23", "code": "421917a68167fe589af944c9375ded10460e37aa"},
+      "3": {"title": "The Dice that Never Lie (Unless I Tell Them To)", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 1.35, "date": "2026-10-23", "code": "e0efca1079c1bd4a2e298640d5c59cb7ed183ec8"}
+    },
+    "3": {
+      "1": {"title": "Scales, Bags and a Bit of a Mess", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0033, "date": "2026-10-23", "code": "c46c2c4029331c6487b100d0a880b02dd8fb35dd"},
+      "2": {"title": "How Quack Echoes Back", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.9549, "date": "2026-10-23", "code": "3497e9117d8112209146bb1ff5afad2ba70c2ca5"},
+      "3": {"title": "Plug and Play", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0041, "date": "2026-10-26", "code": "528ce50c20cdf33abc2d9f4be9668234f9f9317f"}
+    },
+    "4": {
+      "1": {"title": "The Recamán Drapery", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.3522, "date": "2026-10-23", "code": "25e2c8546e2bde48b23cb7689a039d9c774e55dd"},
+      "2": {"status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0322, "date": "2026-10-23", "code": "86340c139e3835277faab8b1500a1463be47d6b6"},
+      "3": {"status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0037, "date": "2026-10-23", "code": "80a05988125abebf5b8639be6d98e27f66502845"}
+    }
+  }
+}
