@@ -17,4 +17,4 @@
 | 2 | [Tangled Trees](https://everybody.codes/story/1/quests/2) | `█` [★★★](solutions/quest_02.py) | 18 ms |
 | 3 | [The Conical Snail Clock](https://everybody.codes/story/1/quests/3) | `█` [★★★](solutions/quest_03.py) | < 1 ms |
 
-<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>Python 3.13.14 · Apple M3 · 27 October 2026</sub>
+<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>Python 3.13.14 · Apple M3 · 28 October 2026</sub>

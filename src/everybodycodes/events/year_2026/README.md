@@ -2,19 +2,19 @@
 
 [← 2025](../year_2025/README.md) · [Scoreboard](../../../../README.md#scoreboard)
 
-| Stars | 3/60 |
+| Stars | 6/60 |
 | :-- | --: |
-| `█` solved in under 5 s | 1 |
+| `█` solved in under 5 s | 2 |
 | `▓` solved in under 5 min | 0 |
 | `▒` two parts only | 0 |
 | `░` one part only | 0 |
-| ` ` not solved | 19 |
-| Time of solved quests | < 1 ms |
+| ` ` not solved | 18 |
+| Time of solved quests | 9 ms |
 
 | Quest | Puzzle | Solution | Time |
 | --: | :-- | :-- | --: |
 | 1 | [The Coneservation](https://everybody.codes/event/2026/quests/1) | `█` [★★★](solutions/quest_01.py) | < 1 ms |
-| 2 | [Quest 2](https://everybody.codes/event/2026/quests/2) | ` ` ☆☆☆ |  |
+| 2 | [Quest 2](https://everybody.codes/event/2026/quests/2) | `█` [★★★](solutions/quest_02.py) | 9 ms † |
 | 3 | [Quest 3](https://everybody.codes/event/2026/quests/3) | ` ` ☆☆☆ |  |
 | 4 | [Quest 4](https://everybody.codes/event/2026/quests/4) | ` ` ☆☆☆ |  |
 | 5 | [Quest 5](https://everybody.codes/event/2026/quests/5) | ` ` ☆☆☆ |  |
@@ -34,4 +34,4 @@
 | 19 | [Quest 19](https://everybody.codes/event/2026/quests/19) | ` ` ☆☆☆ |  |
 | 20 | [Quest 20](https://everybody.codes/event/2026/quests/20) | ` ` ☆☆☆ |  |
 
-<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>Python 3.13.14 · Apple M3 · 27 October 2026</sub>
+<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>† measured on code that differs from the last commit<br>Python 3.13.14 · Apple M3 · 28 October 2026</sub>

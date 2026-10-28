@@ -16,13 +16,12 @@ def preprocessing(
     Parse each line of the input into a group of (low, high) comparisons.
     """
     puzzle_inputs: list[list[list[Comparison]]] = []
-    groups: list[list[Comparison]] = []
     for pi in puzzle_input.values():
-        groups = []
+        groups: list[list[Comparison]] = []
         for group in pi.splitlines():
             groups.append(
                 [get_low_and_high(calc) for calc in group.split(' ')])
-    puzzle_inputs.append(groups)
+        puzzle_inputs.append(groups)
     return puzzle_inputs
 
 
@@ -37,7 +36,8 @@ def solver(notes: list[list[list[Comparison]]]) -> Iterator[int]:
             order: defaultdict[int, set[int]] = defaultdict(set)
             for a, b in comp:
                 order[a].add(b)
-
+                if b not in order:
+                    order[b] = set()
             n = max(order.keys())
             target = n * (n - 1) // 2
             while sum(len(alloy) for alloy in order.values()) < target:
