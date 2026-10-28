@@ -14,7 +14,7 @@
 | [Story 1](src/everybodycodes/stories/story_01/README.md) | Echoes of Enigmatus | `███` | 9/9 |
 | **Total** | | `█` 38 `▓` 3 `▒` 9 `░` 2 ` ` 20 | **143/216** |
 
-<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>1 result(s) measured on uncommitted code, marked † on the event pages<br>Python 3.13.14 · Apple M3 · 28 October 2026</sub>
+<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>Python 3.13.14 · Apple M3 · 28 October 2026</sub>
 <!-- scoreboard:end -->
 
 ## GridOS

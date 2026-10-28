@@ -47,7 +47,7 @@
     },
     "2026": {
       "1": {"title": "The Coneservation", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0003, "date": "2026-10-27", "code": "ebaa307869a55a120e5814c5bf0d5ce756f9b8f1"},
-      "2": {"status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.009, "date": "2026-10-28", "code": "96f9ca978cf300431926c92cfc78232e9e16170a"}
+      "2": {"title": "The Axeperiment", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0094, "date": "2026-10-28", "code": "6d93891cdb03a3da57c561323764a618b5dbd010"}
     }
   },
   "stories": {

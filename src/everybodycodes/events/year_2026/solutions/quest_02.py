@@ -1,6 +1,6 @@
 """
-Everybody Codes - 2026 - Quest 2
-https://everybody.codes/event/2026/quests
+Event: Lord of the Wings
+Quest: The Axeperiment
 """
 
 from collections import defaultdict
