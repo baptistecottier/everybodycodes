@@ -7,18 +7,21 @@ import heapq
 import re
 from typing import Iterator
 
-type Vote = tuple[str, str]
+type Vote = tuple[list[int], list[int]]
 
 
 def preprocessing(
         puzzle_input: dict[int, str]
 ) -> list[list[Vote]]:
     """
-    Parse each input into its list of (base digits, number) ISO pairs.
+    Parse each input into its list of (base digits, number digits) ISO pairs.
     """
-    results: list[list[Vote]] = [
+    str_results: list[list[tuple[str, str]]] = [
         re.findall(r'ISO\d?-(\d+) (\d+)', isos)
         for isos in puzzle_input.values()]
+    results = [
+        [(list(map(int, n1)), list(map(int, n2))) for n1, n2 in votes]
+        for votes in str_results]
     return results
 
 
@@ -46,7 +49,7 @@ def compute_final_score(votes: list[Vote]) -> list[int]:
     return scores
 
 
-def compute_score(n1: str, n2: str) -> int:
+def compute_score(n1: list[int], n2: list[int]) -> int:
     """
     Return the value of n2 where the digit at position i weighs b ** i,
     b being the matching digit of n1 read cyclically from the right.
@@ -54,33 +57,33 @@ def compute_score(n1: str, n2: str) -> int:
     score = 0
     length = len(n2)
     for i in range(length):
-        a = int(n1[- (i + 1) % len(n1)])
-        b = int(n2[- (i + 1)])
+        a = n1[- (i + 1) % len(n1)]
+        b = n2[- (i + 1)]
         score += b * pow(a, i)
     return score
 
 
-def is_iso_2(n1: str, n2: str, score: int) -> bool:
+def is_iso_2(n1: list[int], n2: list[int], score: int) -> bool:
     """
     Tell whether n2 is the smallest number whose score with n1 is score.
     """
     n_digits = 1
     temp = 9
     weights = [
-        pow(int(n1[-(i + 1) % len(n1)]), i) for i in range(len(n2) + 1)]
+        pow(n1[-(i + 1) % len(n1)], i) for i in range(len(n2) + 1)]
     max_pows = [
         sum(9 * weights[i] for i in range(size))
         for size in range(len(n2) + 1)]
 
     while temp < score:
-        temp += 9 * pow(int(n1[-(n_digits + 1) % len(n1)]), n_digits)
+        temp += 9 * pow(n1[-(n_digits + 1) % len(n1)], n_digits)
         max_pows.append(temp)
         n_digits += 1
     smaller = -1
     while smaller == -1:
         smaller = find_smaller(score, weights, max_pows, n_digits - 1)
         n_digits += 1
-    return smaller == int(n2)
+    return list(map(int, str(smaller))) == n2
 
 
 def find_smaller(
