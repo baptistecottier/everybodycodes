@@ -9,14 +9,14 @@
 | `▒` two parts only | 0 |
 | `░` one part only | 0 |
 | ` ` not solved | 16 |
-| Time of solved quests | 251 ms |
+| Time of solved quests | 267 ms |
 
 | Quest | Puzzle | Solution | Time |
 | --: | :-- | :-- | --: |
 | 1 | [The Coneservation](https://everybody.codes/event/2026/quests/1) | `█` [★★★](solutions/quest_01.py) | < 1 ms |
 | 2 | [The Axeperiment](https://everybody.codes/event/2026/quests/2) | `█` [★★★](solutions/quest_02.py) | 9 ms |
 | 3 | [The ISOlation](https://everybody.codes/event/2026/quests/3) | `█` [★★★](solutions/quest_03.py) | 228 ms |
-| 4 | [The Rankening](https://everybody.codes/event/2026/quests/4) | `█` [★★★](solutions/quest_04.py) | 13 ms |
+| 4 | [The Rankening](https://everybody.codes/event/2026/quests/4) | `█` [★★★](solutions/quest_04.py) | 30 ms |
 | 5 | [Quest 5](https://everybody.codes/event/2026/quests/5) | ` ` ☆☆☆ |  |
 | 6 | [Quest 6](https://everybody.codes/event/2026/quests/6) | ` ` ☆☆☆ |  |
 | 7 | [Quest 7](https://everybody.codes/event/2026/quests/7) | ` ` ☆☆☆ |  |

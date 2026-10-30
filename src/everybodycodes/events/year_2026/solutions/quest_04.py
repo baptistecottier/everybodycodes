@@ -6,7 +6,7 @@ Quest: The Rankening
 from collections import defaultdict
 from dataclasses import dataclass
 import re
-from typing import Callable, Iterator, cast
+from typing import Callable, Iterator
 
 
 @dataclass
@@ -105,7 +105,7 @@ def sorted_by_time(runners: Runners) -> list[int]:
     """
     Return the total time of each runner, the slowest first.
     """
-    scores = [sum(cast(int, quest.time_after_p3) for quest in runner)
+    scores = [sum(quest.total_time() for quest in runner)
               for runner in runners.values()]
     return sorted(scores, reverse=True)
 
