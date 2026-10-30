@@ -5,16 +5,16 @@
 
 | Event | Title | Quests | ★ |
 | :-- | :-- | :-- | --: |
-| [2026](src/everybodycodes/events/year_2026/README.md) | Lord of the Wings | `███  ` `     ` `     ` `     ` | 9/60 |
+| [2026](src/everybodycodes/events/year_2026/README.md) | Lord of the Wings | `████ ` `     ` `     ` `     ` | 12/60 |
 | [2025](src/everybodycodes/events/year_2025/README.md) | The Song of Ducks and Dragons | `█▓███` `██▓█▒` `▒███▒` `▒ ██░` | 51/60 |
 | [2024](src/everybodycodes/events/year_2024/README.md) | The Kingdom of Algorithmia | `█████` `████ ` `█▒██▒` `▒█▒▒░` | 50/60 |
 | [Story 4](src/everybodycodes/stories/story_04/README.md) | The Digital Atelier | `███` | 9/9 |
 | [Story 3](src/everybodycodes/stories/story_03/README.md) | Melody Made of Code | `███` | 9/9 |
 | [Story 2](src/everybodycodes/stories/story_02/README.md) | The Entertainment Hub | `▓██` | 9/9 |
 | [Story 1](src/everybodycodes/stories/story_01/README.md) | Echoes of Enigmatus | `███` | 9/9 |
-| **Total** | | `█` 39 `▓` 3 `▒` 9 `░` 2 ` ` 19 | **146/216** |
+| **Total** | | `█` 40 `▓` 3 `▒` 9 `░` 2 ` ` 18 | **149/216** |
 
-<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>Python 3.13.14 · Apple M3 · 29 October 2026</sub>
+<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>Python 3.13.14 · Apple M3 · 30 October 2026</sub>
 <!-- scoreboard:end -->
 
 ## GridOS
