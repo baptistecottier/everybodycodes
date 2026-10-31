@@ -34,4 +34,4 @@
 | 19 | [Encrypted Duck](https://everybody.codes/event/2024/quests/19) | `▒` [★★☆](solutions/quest_19.py) | 33 ms |
 | 20 | [Gliding Finale](https://everybody.codes/event/2024/quests/20) | `░` [★?☆](solutions/quest_20.py) | 1.1 s |
 
-<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>? no answer known locally, so it cannot be verified<br>Python 3.13.14 · Apple M3 · 30 October 2026</sub>
+<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>? no answer known locally, so it cannot be verified<br>Python 3.13.14 · Apple M3 · 31 October 2026</sub>
