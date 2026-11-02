@@ -5,10 +5,20 @@ Quest: The Cartograffity
 
 from collections import deque
 from collections.abc import Set
-from typing import Iterator
+from typing import Iterator, NamedTuple
 
 type Cell = tuple[int, int]
 type Grid = tuple[set[Cell], int, int]
+
+
+class ExtraRules(NamedTuple):
+    """
+    Friendly neighbours to exceed, cells to stay away from, and rounds to grow
+    for (negative for no limit).
+    """
+    threshold: int = 4
+    forbidden: Set[Cell] = frozenset()
+    rounds: int = -1
 
 
 def preprocessing(puzzle_input: dict[int, str]) -> list[Grid]:
@@ -42,45 +52,44 @@ def make_map(dark_cells: set[Cell], w: int, h: int) -> tuple[int, int, int]:
     """
     x = w // 2
     y = h // 2
-    neighbours = ((-1, -1), (0, -1), (1, -1), (-1, 0),
-                  (1, 0), (-1, 1), (0, 1), (1, 1))
 
     land = {(x, y)}
     dark_cells.add((x, y))
-    queue = deque([(x + dx, y + dy) for dx, dy in neighbours])
-    grow(land, queue, dark_cells, land)
+    grow(land, dark_cells, land)
 
-    sand, queue = discover(land)
-    grow(sand, queue, sand, land)
+    sand = discover(land)
+    grow(sand, sand, land)
     land.difference_update(sand)
 
     extra_nb = {(-1, -2), (0, -2), (1, -2), (-2, -1),
                 (2, -1), (-2, 0), (2, 0), (-2, 1),
                 (2, 1), (-1, 2),  (0, 2),  (1, 2)}
-    trees, queue = discover(land, False, extra_nb)
-    grow(trees, queue, trees, land, threshold=3, forbidden=sand, rounds=2)
+    trees = discover(land, False, extra_nb)
+    grow(trees, trees, land, ExtraRules(3, sand, 2))
 
     return (len(land) + len(sand), len(sand), len(trees))
 
 
-def grow(  # pylint: disable=too-many-arguments,too-many-positional-arguments
+def grow(
         items: set[Cell],
-        queue: deque[Cell],
         friendly_nb: set[Cell],
         land: set[Cell],
-        threshold: int = 4,
-        forbidden: Set[Cell] = frozenset(),
-        rounds: int = -1
+        rules: ExtraRules = ExtraRules()
 ) -> None:
     """
-    Add the queued cells with more than threshold friendly neighbours and no
-    forbidden one to items, round by round, until the queue is empty or the
-    rounds are exhausted. New cells only count from the following round.
+    Add the cells around items with more than threshold friendly neighbours
+    and no forbidden one to items, round by round, until no cell is left to
+    check or the rounds are exhausted. New cells only count from the following
+    round.
     """
+    threshold, forbidden, rounds = rules
     friendly_land = items != land
     nuclear_neigbours = set(
         ((-1, -1), (0, -1), (1, -1), (-1, 0),
          (1, 0), (-1, 1), (0, 1), (1, 1)))
+    queue = deque((x + tx, y + ty) for x, y in items
+                  for tx, ty in nuclear_neigbours
+                  if ((x + tx, y + ty) in land) == friendly_land)
     while queue and rounds != 0:
         rounds -= 1
         new_items: set[Cell] = set()
@@ -102,22 +111,18 @@ def discover(
         land: set[Cell],
         expected: bool = True,
         extra_nb: Set[Cell] = frozenset()
-) -> tuple[set[Cell], deque[Cell]]:
+) -> set[Cell]:
     """
     Return the land cells that do (expected) or do not touch a non-land cell,
-    extra_nb widening the neighbourhood, and the land cells next to them.
+    extra_nb widening the neighbourhood.
     """
     nuclear_neigbours = set(
         ((-1, -1), (0, -1), (1, -1), (-1, 0),
          (1, 0), (-1, 1), (0, 1), (1, 1)))
     all_neighbours = nuclear_neigbours.union(extra_nb)
     items: set[Cell] = set()
-    queue: deque[Cell] = deque()
     for x, y in land:
         if (any((x + dx, y + dy) not in land for dx, dy in all_neighbours)
                 == expected):
             items.add((x, y))
-            for tx, ty in nuclear_neigbours:
-                if (x + tx, y + ty) in land:
-                    queue.append((x + tx, y + ty))
-    return items, queue
+    return items

@@ -9,7 +9,7 @@
 | `▒` two parts only | 0 |
 | `░` one part only | 0 |
 | ` ` not solved | 15 |
-| Time of solved quests | 428 ms |
+| Time of solved quests | 435 ms |
 
 | Quest | Puzzle | Solution | Time |
 | --: | :-- | :-- | --: |
@@ -17,7 +17,7 @@
 | 2 | [The Axeperiment](https://everybody.codes/event/2026/quests/2) | `█` [★★★](solutions/quest_02.py) | 9 ms |
 | 3 | [The ISOlation](https://everybody.codes/event/2026/quests/3) | `█` [★★★](solutions/quest_03.py) | 228 ms |
 | 4 | [The Rankening](https://everybody.codes/event/2026/quests/4) | `█` [★★★](solutions/quest_04.py) | 30 ms |
-| 5 | [The Cartograffity](https://everybody.codes/event/2026/quests/5) | `█` [★★★](solutions/quest_05.py) | 161 ms |
+| 5 | [The Cartograffity](https://everybody.codes/event/2026/quests/5) | `█` [★★★](solutions/quest_05.py) | 168 ms |
 | 6 | [Quest 6](https://everybody.codes/event/2026/quests/6) | ` ` ☆☆☆ |  |
 | 7 | [Quest 7](https://everybody.codes/event/2026/quests/7) | ` ` ☆☆☆ |  |
 | 8 | [Quest 8](https://everybody.codes/event/2026/quests/8) | ` ` ☆☆☆ |  |
@@ -34,4 +34,4 @@
 | 19 | [Quest 19](https://everybody.codes/event/2026/quests/19) | ` ` ☆☆☆ |  |
 | 20 | [Quest 20](https://everybody.codes/event/2026/quests/20) | ` ` ☆☆☆ |  |
 
-<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>Python 3.13.14 · Apple M3 · 31 October 2026</sub>
+<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>Python 3.13.14 · Apple M3 · 2 November 2026</sub>
