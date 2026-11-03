@@ -1,5 +1,5 @@
 {
-  "meta": {"timeout": 300, "machine": "Apple M3", "date": "2026-11-02", "python": "3.13.14"},
+  "meta": {"timeout": 300, "machine": "Apple M3", "date": "2026-11-03", "python": "3.13.14"},
   "events": {
     "2024": {
       "1": {"title": "The Battle for the Farmlands", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0011, "date": "2026-10-23", "code": "db59326d21c13142949655ad37bdc7b54c26b1ed"},
@@ -50,7 +50,8 @@
       "2": {"title": "The Axeperiment", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0094, "date": "2026-10-28", "code": "6d93891cdb03a3da57c561323764a618b5dbd010"},
       "3": {"title": "The ISOlation", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.2277, "date": "2026-10-30", "code": "0994f46abd88c12f3bb0ec3986d1e945c84bffe3"},
       "4": {"title": "The Rankening", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0296, "date": "2026-10-30", "code": "882b60bfeb92134911fe79368577bda77f322ad6"},
-      "5": {"title": "The Cartograffity", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.1683, "date": "2026-11-02", "code": "7372d4fe08318692f6167439962439a9d731e6ed"}
+      "5": {"title": "The Cartograffity", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.1683, "date": "2026-11-02", "code": "7372d4fe08318692f6167439962439a9d731e6ed"},
+      "6": {"title": "The Nullspiracy", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.776, "date": "2026-11-03", "code": "cc65411187a43eec89510eb065251572f7bb4bc7"}
     }
   },
   "stories": {
