@@ -2,13 +2,13 @@
 
 [← 2025](../year_2025/README.md) · [Scoreboard](../../../../README.md#scoreboard)
 
-| Stars | 18/60 |
+| Stars | 20/60 |
 | :-- | --: |
 | `█` solved in under 5 s | 6 |
 | `▓` solved in under 5 min | 0 |
-| `▒` two parts only | 0 |
+| `▒` two parts only | 1 |
 | `░` one part only | 0 |
-| ` ` not solved | 14 |
+| ` ` not solved | 13 |
 | Time of solved quests | 1.2 s |
 
 | Quest | Puzzle | Solution | Time |
@@ -21,7 +21,7 @@
 | 6 | [The Nullspiracy](https://everybody.codes/event/2026/quests/6) | `█` [★★★](solutions/quest_06.py) | 776 ms |
 | 7 | [Quest 7](https://everybody.codes/event/2026/quests/7) | ` ` ☆☆☆ |  |
 | 8 | [Quest 8](https://everybody.codes/event/2026/quests/8) | ` ` ☆☆☆ |  |
-| 9 | [Quest 9](https://everybody.codes/event/2026/quests/9) | ` ` ☆☆☆ |  |
+| 9 | [The Sulphurprise](https://everybody.codes/event/2026/quests/9) | `▒` [★★☆](solutions/quest_09.py) | 4 ms |
 | 10 | [Quest 10](https://everybody.codes/event/2026/quests/10) | ` ` ☆☆☆ |  |
 | 11 | [Quest 11](https://everybody.codes/event/2026/quests/11) | ` ` ☆☆☆ |  |
 | 12 | [Quest 12](https://everybody.codes/event/2026/quests/12) | ` ` ☆☆☆ |  |
@@ -34,4 +34,4 @@
 | 19 | [Quest 19](https://everybody.codes/event/2026/quests/19) | ` ` ☆☆☆ |  |
 | 20 | [Quest 20](https://everybody.codes/event/2026/quests/20) | ` ` ☆☆☆ |  |
 
-<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>Python 3.13.14 · Apple M3 · 3 November 2026</sub>
+<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>Python 3.13.14 · Apple M3 · 8 November 2026</sub>
