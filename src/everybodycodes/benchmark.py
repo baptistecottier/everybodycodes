@@ -260,7 +260,7 @@ def child(path: str) -> None:
         out.write(json.dumps(message) + "\n")
         out.flush()
 
-    data = {
+    puzzle_inputs = {
         int(part): text for part, text in json.loads(sys.stdin.read()).items()
     }
     sys.path.insert(0, str(ROOT))
@@ -273,9 +273,9 @@ def child(path: str) -> None:
         spec.loader.exec_module(module)
         start = time.perf_counter()
         args = (
-            module.preprocessing(data)
+            module.preprocessing(puzzle_inputs)
             if hasattr(module, "preprocessing")
-            else data
+            else puzzle_inputs
         )
         result = module.solver(args)
         if not isinstance(result, Iterable) or isinstance(
