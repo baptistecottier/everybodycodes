@@ -2,14 +2,14 @@
 
 [← 2025](../year_2025/README.md) · [Scoreboard](../../../../README.md#scoreboard)
 
-| Stars | 22/60 |
+| Stars | 25/60 |
 | :-- | --: |
-| `█` solved in under 5 s | 6 |
+| `█` solved in under 5 s | 7 |
 | `▓` solved in under 5 min | 0 |
 | `▒` two parts only | 2 |
 | `░` one part only | 0 |
-| ` ` not solved | 12 |
-| Time of solved quests | 1.2 s |
+| ` ` not solved | 11 |
+| Time of solved quests | 2.0 s |
 
 | Quest | Puzzle | Solution | Time |
 | --: | :-- | :-- | --: |
@@ -20,7 +20,7 @@
 | 5 | [The Cartograffity](https://everybody.codes/event/2026/quests/5) | `█` [★★★](solutions/quest_05.py) | 168 ms |
 | 6 | [The Nullspiracy](https://everybody.codes/event/2026/quests/6) | `█` [★★★](solutions/quest_06.py) | 776 ms |
 | 7 | [The Explouding](https://everybody.codes/event/2026/quests/7) | `▒` [★★☆](solutions/quest_07.py) | < 1 ms |
-| 8 | [Quest 8](https://everybody.codes/event/2026/quests/8) | ` ` ☆☆☆ |  |
+| 8 | [The Entgineering](https://everybody.codes/event/2026/quests/8) | `█` [★★★](solutions/quest_08.py) | 790 ms |
 | 9 | [The Sulphurprise](https://everybody.codes/event/2026/quests/9) | `▒` [★★☆](solutions/quest_09.py) | 4 ms |
 | 10 | [Quest 10](https://everybody.codes/event/2026/quests/10) | ` ` ☆☆☆ |  |
 | 11 | [Quest 11](https://everybody.codes/event/2026/quests/11) | ` ` ☆☆☆ |  |
