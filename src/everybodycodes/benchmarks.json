@@ -54,7 +54,8 @@
       "6": {"title": "The Nullspiracy", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.776, "date": "2026-11-03", "code": "cc65411187a43eec89510eb065251572f7bb4bc7"},
       "7": {"title": "The Explouding", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.0005, "date": "2026-11-08", "code": "2d61ebae25a0c96e7333b2ab9d677d435b0823b0"},
       "8": {"title": "The Entgineering", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.7901, "date": "2026-11-08", "code": "8089333a087d152bdb900cb369ff0c0d51b1310d"},
-      "9": {"title": "The Sulphurprise", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.0041, "date": "2026-11-08", "code": "cc2bddbfe7bacf4a40a62717e8590f79817d7da6"}
+      "9": {"title": "The Sulphurprise", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.0041, "date": "2026-11-08", "code": "cc2bddbfe7bacf4a40a62717e8590f79817d7da6"},
+      "10": {"title": "The Phantasmagorithm", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 1.4666, "date": "2026-11-08", "code": "2b267189449599dd7db7b8e0efde022b435c7be0"}
     }
   },
   "stories": {
