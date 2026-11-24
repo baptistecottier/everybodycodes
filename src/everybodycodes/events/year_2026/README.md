@@ -2,14 +2,14 @@
 
 [← 2025](../year_2025/README.md) · [Scoreboard](../../../../README.md#scoreboard)
 
-| Stars | 27/60 |
+| Stars | 30/60 |
 | :-- | --: |
-| `█` solved in under 5 s | 7 |
+| `█` solved in under 5 s | 8 |
 | `▓` solved in under 5 min | 0 |
 | `▒` two parts only | 3 |
 | `░` one part only | 0 |
-| ` ` not solved | 10 |
-| Time of solved quests | 2.0 s |
+| ` ` not solved | 9 |
+| Time of solved quests | 2.1 s |
 
 | Quest | Puzzle | Solution | Time |
 | --: | :-- | :-- | --: |
@@ -32,6 +32,6 @@
 | 17 | [Quest 17](https://everybody.codes/event/2026/quests/17) | ` ` ☆☆☆ |  |
 | 18 | [Quest 18](https://everybody.codes/event/2026/quests/18) | ` ` ☆☆☆ |  |
 | 19 | [Quest 19](https://everybody.codes/event/2026/quests/19) | ` ` ☆☆☆ |  |
-| 20 | [Quest 20](https://everybody.codes/event/2026/quests/20) | ` ` ☆☆☆ |  |
+| 20 | [The Matchmatics](https://everybody.codes/event/2026/quests/20) | `█` [★★★](solutions/quest_20.py) | 61 ms |
 
-<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>Python 3.13.14 · Apple M3 · 8 November 2026</sub>
+<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>Python 3.13.14 · Apple M3 · 24 November 2026</sub>
