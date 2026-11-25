@@ -36,12 +36,11 @@ def solver(notes: list[dict[int, tuple[int, list[int]]]]) -> Iterator[int]:
     yield sum(propagate_impulse(notes[1], 10, max_cloud).values())
 
 
-# pylint: disable-next=dangerous-default-value
 def propagate_impulse(
         clouds: dict[int, tuple[int, list[int]]],
         energy: int,
         starting_cloud: int,
-        exploded: set[int] = set()
+        exploded: set[int] | None = None
 ) -> dict[int, int]:
     """
     Return the impulse of each cloud once energy has been sent from
@@ -49,6 +48,8 @@ def propagate_impulse(
     clouds connected to those reached at the step before, except exploded
     ones.
     """
+    if not exploded:
+        exploded = set()
     impulses = {c: clouds[c][0] for c in clouds.keys()}
     connections = {starting_cloud: 1}
     impulses[starting_cloud] += energy
