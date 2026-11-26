@@ -59,6 +59,7 @@
       "11": {"title": "The Portalignment", "status": "wrong", "parts": ["ok", "missing", "missing"], "time": 6.3528, "date": "2026-11-26", "code": "6c3991ac0933d8136774b3532de624dc0d756be6"},
       "12": {"title": "The Castastrophe", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.0162, "date": "2026-11-26", "code": "cf54f776d338d0772e8140d7c8995c6cf7f824ec"},
       "16": {"title": "The Sortcery", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 6.1605, "date": "2026-11-26", "code": "55a4830bd9384fdb67a92899c6e4a74b03902d93"},
+      "17": {"title": "The Lavairynth", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.0009, "date": "2026-11-26", "code": "ff6d3835b42734fcea68a433af938036b6bd9991"},
       "19": {"title": "The Glasscraft", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.1151, "date": "2026-11-24", "code": "9ac7a142a65656f98ef0029421fb61d29b7d2d09"},
       "20": {"title": "The Matchmatics", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0613, "date": "2026-11-24", "code": "4e01434b093b79aaf8622887a103fdb796f926da"}
     }
