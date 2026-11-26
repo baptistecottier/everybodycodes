@@ -2,13 +2,13 @@
 
 [← 2025](../year_2025/README.md) · [Scoreboard](../../../../README.md#scoreboard)
 
-| Stars | 36/60 |
+| Stars | 38/60 |
 | :-- | --: |
 | `█` solved in under 5 s | 9 |
 | `▓` solved in under 5 min | 0 |
-| `▒` two parts only | 4 |
+| `▒` two parts only | 5 |
 | `░` one part only | 1 |
-| ` ` not solved | 6 |
+| ` ` not solved | 5 |
 | Time of solved quests | 2.2 s |
 
 | Quest | Puzzle | Solution | Time |
@@ -28,7 +28,7 @@
 | 13 | [Quest 13](https://everybody.codes/event/2026/quests/13) | ` ` ☆☆☆ |  |
 | 14 | [Quest 14](https://everybody.codes/event/2026/quests/14) | ` ` ☆☆☆ |  |
 | 15 | [Quest 15](https://everybody.codes/event/2026/quests/15) | ` ` ☆☆☆ |  |
-| 16 | [Quest 16](https://everybody.codes/event/2026/quests/16) | ` ` ☆☆☆ |  |
+| 16 | [The Sortcery](https://everybody.codes/event/2026/quests/16) | `▒` [★★☆](solutions/quest_16.py) | 6.2 s |
 | 17 | [Quest 17](https://everybody.codes/event/2026/quests/17) | ` ` ☆☆☆ |  |
 | 18 | [Quest 18](https://everybody.codes/event/2026/quests/18) | ` ` ☆☆☆ |  |
 | 19 | [The Glasscraft](https://everybody.codes/event/2026/quests/19) | `█` [★★★](solutions/quest_19.py) | 115 ms |
