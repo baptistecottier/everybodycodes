@@ -57,6 +57,7 @@
       "9": {"title": "The Sulphurprise", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.0041, "date": "2026-11-08", "code": "cc2bddbfe7bacf4a40a62717e8590f79817d7da6"},
       "10": {"title": "The Phantasmagorithm", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 1.4666, "date": "2026-11-08", "code": "2b267189449599dd7db7b8e0efde022b435c7be0"},
       "11": {"title": "The Portalignment", "status": "wrong", "parts": ["ok", "missing", "missing"], "time": 6.3528, "date": "2026-11-26", "code": "6c3991ac0933d8136774b3532de624dc0d756be6"},
+      "12": {"title": "The Castastrophe", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.0162, "date": "2026-11-26", "code": "cf54f776d338d0772e8140d7c8995c6cf7f824ec"},
       "19": {"title": "The Glasscraft", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.1151, "date": "2026-11-24", "code": "9ac7a142a65656f98ef0029421fb61d29b7d2d09"},
       "20": {"title": "The Matchmatics", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0613, "date": "2026-11-24", "code": "4e01434b093b79aaf8622887a103fdb796f926da"}
     }

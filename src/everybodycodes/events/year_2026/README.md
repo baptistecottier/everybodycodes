@@ -2,13 +2,13 @@
 
 [← 2025](../year_2025/README.md) · [Scoreboard](../../../../README.md#scoreboard)
 
-| Stars | 34/60 |
+| Stars | 36/60 |
 | :-- | --: |
 | `█` solved in under 5 s | 9 |
 | `▓` solved in under 5 min | 0 |
-| `▒` two parts only | 3 |
+| `▒` two parts only | 4 |
 | `░` one part only | 1 |
-| ` ` not solved | 7 |
+| ` ` not solved | 6 |
 | Time of solved quests | 2.2 s |
 
 | Quest | Puzzle | Solution | Time |
@@ -24,7 +24,7 @@
 | 9 | [The Sulphurprise](https://everybody.codes/event/2026/quests/9) | `▒` [★★☆](solutions/quest_09.py) | 4 ms |
 | 10 | [The Phantasmagorithm](https://everybody.codes/event/2026/quests/10) | `▒` [★★☆](solutions/quest_10.py) | 1.5 s |
 | 11 | [The Portalignment](https://everybody.codes/event/2026/quests/11) | `░` [★☆☆](solutions/quest_11.py) | 6.4 s |
-| 12 | [Quest 12](https://everybody.codes/event/2026/quests/12) | ` ` ☆☆☆ |  |
+| 12 | [The Castastrophe](https://everybody.codes/event/2026/quests/12) | `▒` [★★☆](solutions/quest_12.py) | 16 ms |
 | 13 | [Quest 13](https://everybody.codes/event/2026/quests/13) | ` ` ☆☆☆ |  |
 | 14 | [Quest 14](https://everybody.codes/event/2026/quests/14) | ` ` ☆☆☆ |  |
 | 15 | [Quest 15](https://everybody.codes/event/2026/quests/15) | ` ` ☆☆☆ |  |
