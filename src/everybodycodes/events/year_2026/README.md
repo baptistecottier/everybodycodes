@@ -2,13 +2,13 @@
 
 [← 2025](../year_2025/README.md) · [Scoreboard](../../../../README.md#scoreboard)
 
-| Stars | 40/60 |
+| Stars | 43/60 |
 | :-- | --: |
-| `█` solved in under 5 s | 9 |
+| `█` solved in under 5 s | 10 |
 | `▓` solved in under 5 min | 0 |
 | `▒` two parts only | 6 |
 | `░` one part only | 1 |
-| ` ` not solved | 4 |
+| ` ` not solved | 3 |
 | Time of solved quests | 2.2 s |
 
 | Quest | Puzzle | Solution | Time |
@@ -30,8 +30,8 @@
 | 15 | [Quest 15](https://everybody.codes/event/2026/quests/15) | ` ` ☆☆☆ |  |
 | 16 | [The Sortcery](https://everybody.codes/event/2026/quests/16) | `▒` [★★☆](solutions/quest_16.py) | 6.2 s |
 | 17 | [The Lavairynth](https://everybody.codes/event/2026/quests/17) | `▒` [★★☆](solutions/quest_17.py) | < 1 ms |
-| 18 | [Quest 18](https://everybody.codes/event/2026/quests/18) | ` ` ☆☆☆ |  |
+| 18 | [The Keyometry](https://everybody.codes/event/2026/quests/18) | `█` [★★★](solutions/quest_18.py) | 6 ms |
 | 19 | [The Glasscraft](https://everybody.codes/event/2026/quests/19) | `█` [★★★](solutions/quest_19.py) | 115 ms |
 | 20 | [The Matchmatics](https://everybody.codes/event/2026/quests/20) | `█` [★★★](solutions/quest_20.py) | 61 ms |
 
-<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>† measured on code that differs from the last commit<br>Python 3.13.14 · Apple M3 · 26 November 2026</sub>
+<sub>`█` solved in under 5 s &emsp; `▓` solved in under 5 min &emsp; `▒` two parts only &emsp; `░` one part only &emsp; ` ` not solved<br>† measured on code that differs from the last commit<br>Python 3.13.14 · Apple M3 · 27 November 2026</sub>

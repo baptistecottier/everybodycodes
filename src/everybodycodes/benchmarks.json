@@ -1,5 +1,5 @@
 {
-  "meta": {"timeout": 300, "machine": "Apple M3", "date": "2026-11-26", "python": "3.13.14"},
+  "meta": {"timeout": 300, "machine": "Apple M3", "date": "2026-11-27", "python": "3.13.14"},
   "events": {
     "2024": {
       "1": {"title": "The Battle for the Farmlands", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0011, "date": "2026-10-23", "code": "db59326d21c13142949655ad37bdc7b54c26b1ed"},
@@ -60,6 +60,7 @@
       "12": {"title": "The Castastrophe", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.0162, "date": "2026-11-26", "code": "cf54f776d338d0772e8140d7c8995c6cf7f824ec"},
       "16": {"title": "The Sortcery", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 6.1605, "date": "2026-11-26", "code": "55a4830bd9384fdb67a92899c6e4a74b03902d93"},
       "17": {"title": "The Lavairynth", "status": "wrong", "parts": ["ok", "ok", "missing"], "time": 0.0009, "date": "2026-11-26", "code": "ff6d3835b42734fcea68a433af938036b6bd9991"},
+      "18": {"title": "The Keyometry", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0061, "date": "2026-11-27", "code": "840238bc12e278c19bb542bb76b50a54d3be6adc"},
       "19": {"title": "The Glasscraft", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.1151, "date": "2026-11-24", "code": "9ac7a142a65656f98ef0029421fb61d29b7d2d09"},
       "20": {"title": "The Matchmatics", "status": "solved", "parts": ["ok", "ok", "ok"], "time": 0.0613, "date": "2026-11-24", "code": "4e01434b093b79aaf8622887a103fdb796f926da"}
     }
